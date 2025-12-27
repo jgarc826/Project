@@ -3,229 +3,256 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jay Bob Remodeling & Construction</title>
+    <title>Kitchen & Bathroom Remodeling</title>
     <meta
       name="description"
-      content="Jay Bob Remodeling & Construction specializes in kitchen remodels, bathroom remodels, home additions, and ADUs. Call today for a free estimate."
+      content="Kitchen & Bathroom Remodeling specialists. Request a callback for a free estimate."
     />
 
     <style>
-      :root {
-        --bg: #0b0f14;
-        --card: rgba(255, 255, 255, 0.06);
-        --card2: rgba(255, 255, 255, 0.08);
-        --text: rgba(255, 255, 255, 0.92);
-        --muted: rgba(255, 255, 255, 0.7);
-        --line: rgba(255, 255, 255, 0.14);
-        --shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
-        --radius: 18px;
+      :root{
+        --bg:#0b0f14;
+        --text:rgba(255,255,255,0.92);
+        --muted:rgba(255,255,255,0.72);
+        --line:rgba(255,255,255,0.14);
+        --card:rgba(255,255,255,0.06);
+        --shadow:0 20px 60px rgba(0,0,0,0.55);
+        --radius:18px;
+        --accent:#1f6feb;
+        --accent2:#ef4444;
+      }
+      *{box-sizing:border-box}
+      body{
+        margin:0;
+        font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+        color:var(--text);
+        background:linear-gradient(180deg,#070a0f,#0b0f14);
+      }
+      a{color:inherit}
+      .wrap{max-width:1180px;margin:0 auto;padding:18px 16px 64px}
+      /* top nav */
+      .top{
+        display:flex;align-items:center;justify-content:space-between;gap:14px;
+        padding:10px 6px;
+      }
+      .brand{
+        display:flex;align-items:center;gap:10px;text-decoration:none;
+      }
+      .logo{
+        width:44px;height:44px;border-radius:14px;
+        background:linear-gradient(135deg,rgba(255,255,255,0.22),rgba(255,255,255,0.06));
+        border:1px solid var(--line);
+        display:grid;place-items:center;
+      }
+      .logo span{font-weight:900;letter-spacing:.5px}
+      .nav{
+        display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+        color:var(--muted);font-size:14px;
+      }
+      .nav a{
+        text-decoration:none;
+        padding:8px 10px;border-radius:999px;border:1px solid transparent;
+      }
+      .nav a:hover{border-color:var(--line);background:rgba(255,255,255,0.04)}
+      .top-right{
+        display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+      }
+      .pill{
+        display:inline-flex;align-items:center;gap:8px;
+        padding:10px 14px;border-radius:999px;
+        border:1px solid var(--line);
+        background:rgba(255,255,255,0.04);
+        text-decoration:none;color:var(--muted);
+        transition:transform .15s ease, background .15s ease;
+      }
+      .pill:hover{transform:translateY(-1px);background:rgba(255,255,255,0.07)}
+      .btn{
+        display:inline-flex;align-items:center;justify-content:center;gap:10px;
+        padding:11px 14px;border-radius:14px;border:1px solid var(--line);
+        text-decoration:none;background:rgba(255,255,255,0.06);
+        transition:transform .15s ease, background .15s ease;
+      }
+      .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,0.09)}
+      .btn.primary{
+        background:rgba(239,68,68,0.9);
+        border-color:rgba(239,68,68,1);
+        font-weight:800;
       }
 
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
-          "Segoe UI Emoji";
-        color: var(--text);
-        background: radial-gradient(1200px 800px at 15% 10%, rgba(255, 255, 255, 0.08), transparent 60%),
-          radial-gradient(900px 700px at 85% 20%, rgba(255, 255, 255, 0.06), transparent 60%),
-          linear-gradient(180deg, #070a0f, #0b0f14);
-        min-height: 100vh;
+      /* promo bar (optional) */
+      .promo{
+        margin:10px 0 16px;
+        border:1px solid rgba(239,68,68,0.35);
+        background:linear-gradient(90deg,rgba(239,68,68,0.92),rgba(239,68,68,0.75));
+        border-radius:16px;
+        padding:12px 14px;
+        display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+        box-shadow:0 18px 40px rgba(0,0,0,0.35);
       }
-
-      .wrap {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 28px 18px 64px;
-      }
-
-      /* top bar */
-      .top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 14px;
-        margin-bottom: 22px;
-      }
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        text-decoration: none;
-        color: var(--text);
-      }
-      .logo {
-        width: 38px;
-        height: 38px;
-        border-radius: 12px;
-        background: linear-gradient(135deg, rgba(255,255,255,0.22), rgba(255,255,255,0.06));
-        border: 1px solid var(--line);
-        display: grid;
-        place-items: center;
-        box-shadow: var(--shadow);
-      }
-      .logo span { font-weight: 800; letter-spacing: 0.5px; }
-      .brand-name { font-weight: 800; letter-spacing: 0.2px; }
-      .pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 10px 14px;
-        border-radius: 999px;
-        border: 1px solid var(--line);
-        background: rgba(255, 255, 255, 0.04);
-        color: var(--muted);
-        text-decoration: none;
-        transition: transform 0.15s ease, background 0.15s ease;
-      }
-      .pill:hover {
-        transform: translateY(-1px);
-        background: rgba(255, 255, 255, 0.07);
+      .promo strong{font-weight:900}
+      .promo .cta{
+        background:rgba(0,0,0,0.35);
+        border:1px solid rgba(255,255,255,0.18);
+        padding:10px 14px;border-radius:14px;
+        text-decoration:none;font-weight:800;
       }
 
       /* hero */
-      .hero {
-        border: 1px solid var(--line);
-        background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-        border-radius: var(--radius);
-        padding: 34px 28px;
-        box-shadow: var(--shadow);
-        position: relative;
-        overflow: hidden;
+      .hero{
+        border:1px solid var(--line);
+        border-radius:24px;
+        overflow:hidden;
+        box-shadow:var(--shadow);
+        display:grid;
+        grid-template-columns: 1.2fr 0.9fr;
+        min-height: 560px;
+        background:rgba(255,255,255,0.02);
       }
-      .hero::after {
-        content: "";
-        position: absolute;
-        inset: -120px -140px auto auto;
-        width: 360px;
-        height: 360px;
-        background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.16), transparent 55%);
-        filter: blur(0px);
+      .hero-left{
+        position:relative;
+        padding:34px 30px;
+        display:flex;flex-direction:column;justify-content:flex-end;
+        background:
+          linear-gradient(90deg, rgba(0,0,0,0.60), rgba(0,0,0,0.10)),
+          url("images/hero-kitchen.jpg");
+        background-size:cover;
+        background-position:center;
       }
-      .kicker {
-        display: inline-flex;
-        gap: 10px;
-        align-items: center;
-        padding: 8px 12px;
-        border-radius: 999px;
-        border: 1px solid var(--line);
-        background: rgba(255,255,255,0.04);
-        color: var(--muted);
-        font-size: 13px;
+      .badge{
+        position:absolute;top:22px;left:22px;
+        display:inline-flex;align-items:center;gap:10px;
+        padding:8px 12px;border-radius:999px;
+        border:1px solid var(--line);
+        background:rgba(0,0,0,0.35);
+        color:var(--muted);font-size:13px;
+        backdrop-filter: blur(8px);
       }
-      h1 {
-        font-size: clamp(32px, 5vw, 52px);
-        margin: 14px 0 10px;
-        line-height: 1.08;
-        letter-spacing: -0.7px;
+      h1{
+        margin:0 0 10px;
+        font-size:clamp(34px,4vw,56px);
+        letter-spacing:-0.8px;
+        line-height:1.06;
       }
-      .sub {
-        font-size: 16px;
-        color: var(--muted);
-        max-width: 62ch;
-        line-height: 1.6;
-        margin: 0 0 18px;
+      .bullets{
+        margin:0 0 14px;
+        padding:0;
+        list-style:none;
+        color:rgba(255,255,255,0.85);
+        display:grid;
+        gap:8px;
+        max-width: 60ch;
       }
-      .cta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 10px;
+      .bullets li{
+        display:flex;gap:10px;align-items:flex-start;
+        font-size:15px;line-height:1.5;
       }
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        padding: 12px 16px;
-        border-radius: 14px;
-        border: 1px solid var(--line);
-        text-decoration: none;
-        color: var(--text);
-        background: rgba(255, 255, 255, 0.06);
-        transition: transform 0.15s ease, background 0.15s ease;
+      .bullets .dot{
+        width:10px;height:10px;border-radius:999px;margin-top:6px;
+        background:rgba(239,68,68,0.95);
+        box-shadow:0 0 0 4px rgba(239,68,68,0.18);
+        flex:0 0 auto;
       }
-      .btn:hover { transform: translateY(-1px); background: rgba(255, 255, 255, 0.09); }
-      .btn.primary {
-        background: rgba(255, 255, 255, 0.14);
-        border-color: rgba(255, 255, 255, 0.24);
-        font-weight: 700;
+      .hero-actions{
+        display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;
       }
+      .hero-actions .btn{backdrop-filter: blur(10px)}
+      .hero-actions .btn.secondary{background:rgba(255,255,255,0.10)}
 
-      /* grid */
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 14px;
-        margin-top: 16px;
+      /* form card */
+      .hero-right{
+        padding:22px;
+        background:
+          radial-gradient(600px 380px at 30% 20%, rgba(31,111,235,0.22), transparent 65%),
+          linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+        display:flex;
       }
-      .card {
-        grid-column: span 4;
-        border: 1px solid var(--line);
-        background: var(--card);
-        border-radius: var(--radius);
-        padding: 16px;
-        box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+      .form-card{
+        width:100%;
+        border:1px solid rgba(31,111,235,0.35);
+        background:rgba(12,16,22,0.55);
+        border-radius:22px;
+        padding:18px;
+        box-shadow:0 18px 50px rgba(0,0,0,0.45);
+        backdrop-filter: blur(10px);
+        display:flex;flex-direction:column;
       }
-      .card h3 { margin: 0 0 6px; font-size: 16px; }
-      .card p { margin: 0; color: var(--muted); line-height: 1.55; font-size: 14px; }
+      .form-card h2{
+        margin:6px 0 6px;
+        font-size:28px;
+        letter-spacing:-0.4px;
+      }
+      .form-card p{
+        margin:0 0 14px;
+        color:var(--muted);
+        line-height:1.5;
+        font-size:14px;
+      }
+      form{display:grid;gap:10px;margin-top:6px}
+      label{font-size:12px;color:var(--muted)}
+      input, select, textarea{
+        width:100%;
+        padding:12px 12px;
+        border-radius:14px;
+        border:1px solid rgba(255,255,255,0.16);
+        background:rgba(255,255,255,0.06);
+        color:var(--text);
+        outline:none;
+      }
+      textarea{min-height:88px;resize:vertical}
+      input::placeholder, textarea::placeholder{color:rgba(255,255,255,0.45)}
+      .row{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:10px;
+      }
+      .submit{
+        margin-top:6px;
+        background:rgba(239,68,68,0.92);
+        border:1px solid rgba(239,68,68,1);
+        font-weight:900;
+        letter-spacing:0.3px;
+        cursor:pointer;
+      }
+      .fineprint{
+        margin-top:10px;
+        color:rgba(255,255,255,0.6);
+        font-size:12px;
+        line-height:1.4;
+      }
 
       /* sections */
-      .section {
-        margin-top: 22px;
-        display: grid;
+      .section{
+        margin-top:18px;
+        display:grid;
         grid-template-columns: repeat(12, 1fr);
-        gap: 14px;
+        gap:14px;
       }
-      .section .left {
-        grid-column: span 5;
-        border: 1px solid var(--line);
-        background: var(--card);
-        border-radius: var(--radius);
-        padding: 18px;
+      .card{
+        border:1px solid var(--line);
+        background:var(--card);
+        border-radius:var(--radius);
+        padding:16px;
+        box-shadow:0 14px 40px rgba(0,0,0,0.35);
       }
-      .section .right {
-        grid-column: span 7;
-        border: 1px solid var(--line);
-        background: var(--card);
-        border-radius: var(--radius);
-        padding: 18px;
-      }
-      .tagline { color: var(--muted); margin-top: 8px; line-height: 1.6; }
-      .list {
-        display: grid;
-        gap: 10px;
-        margin-top: 10px;
-      }
-      .item {
-        border: 1px solid var(--line);
-        background: rgba(255,255,255,0.04);
-        border-radius: 14px;
-        padding: 12px 12px;
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        align-items: center;
-      }
-      .item span { color: var(--muted); font-size: 14px; }
-      .item strong { font-size: 14px; }
-
-      /* footer */
-      footer {
-        margin-top: 18px;
-        color: var(--muted);
-        font-size: 13px;
-        display: flex;
-        justify-content: space-between;
-        gap: 12px;
-        flex-wrap: wrap;
-        opacity: 0.9;
+      .card h3{margin:0 0 8px}
+      .card p{margin:0;color:var(--muted);line-height:1.55;font-size:14px}
+      .span6{grid-column: span 6;}
+      footer{
+        margin-top:18px;
+        color:var(--muted);
+        font-size:13px;
+        display:flex;
+        justify-content:space-between;
+        gap:12px;
+        flex-wrap:wrap;
+        opacity:0.9;
       }
 
-      /* responsive */
-      @media (max-width: 900px) {
-        .card { grid-column: span 12; }
-        .section .left, .section .right { grid-column: span 12; }
+      @media (max-width: 980px){
+        .hero{grid-template-columns: 1fr; min-height: auto;}
+        .hero-left{min-height: 420px;}
+        .row{grid-template-columns:1fr;}
+        .nav{display:none;} /* keep it clean on mobile */
       }
     </style>
   </head>
@@ -234,90 +261,137 @@
     <div class="wrap">
       <div class="top">
         <a class="brand" href="#">
-          <div class="logo"><span>JB</span></div>
-          <div class="brand-name">Jay Bob Construction</div>
+          <div class="logo"><span>KB</span></div>
+          <div style="font-weight:900;">Kitchen &amp; Bathroom Remodeling</div>
         </a>
 
-        <!-- Replace the phone number -->
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="pill" href="tel:16266242544">🇺🇸 English: (626) 624-2544</a>
-            <a class="pill" href="tel:16265593219">🇲🇽 Español: (626) 559-3219</a>
-          </div>
+        <div class="nav">
+          <a href="#kitchens">Kitchens</a>
+          <a href="#bathrooms">Bathrooms</a>
+          <a href="#about">About</a>
+        </div>
+
+        <div class="top-right">
+          <a class="pill" href="tel:16266242544">🇺🇸 English: (626) 624-2544</a>
+          <a class="pill" href="tel:16265593219">🇲🇽 Español: (626) 559-3219</a>
+          <a class="btn primary" href="#get-started">GET STARTED</a>
+        </div>
+      </div>
+
+      <div class="promo">
+        <div>
+          <strong>Free Estimates</strong> • Kitchens & Bathrooms • Serving <strong>YOUR_CITY</strong>
+        </div>
+        <a class="cta" href="#get-started">Request a Callback</a>
       </div>
 
       <div class="hero">
-        <div class="kicker">🏡 Residential Remodeling • Additions • ADUs</div>
-        <h1>Kitchen & Bathroom Remodeling Done Right.</h1>
-        <p class="sub">
-            We specialize exclusively in kitchen and bathroom remodeling for homeowners who want clean workmanship,
-            clear communication, and results that last.
-          </p>
-          <p class="sub">
-            Kitchens • Bathrooms • Residential Remodels Only
-          </p>
+        <div class="hero-left">
+          <div class="badge">🏡 Kitchen & Bathroom Specialists • Residential Only</div>
 
-        <div class="cta">
-            <a class="btn primary" href="tel:16266242544">🇺🇸 Call (English)</a>
-            <a class="btn" href="tel:16265593219">🇲🇽 Llamar (Español)</a>
-          </div>
-      </div>
+          <div>
+            <h1>Upgrade Your Kitchen &amp; Bathroom with Work You Can Trust.</h1>
 
-        <div class="grid">
-            <div class="card">
-              <h3>Kitchen Remodeling</h3>
-              <p>
-                Full kitchen remodels including cabinets, countertops, lighting, layout changes,
-                and finish work—planned and built to code.
-              </p>
-            </div>
-          
-            <div class="card">
-              <h3>Bathroom Remodeling</h3>
-              <p>
-                Bathroom renovations including tile, showers, tubs, vanities, plumbing updates,
-                ventilation, and modern upgrades.
-              </p>
-            </div>
-          </div>
+            <ul class="bullets">
+              <li><span class="dot"></span><span>Clear estimates, clean job sites, and honest timelines.</span></li>
+              <li><span class="dot"></span><span>Quality finishes, solid craftsmanship, and code-first work.</span></li>
+              <li><span class="dot"></span><span>English &amp; Spanish speaking.</span></li>
+            </ul>
 
-
-      <div class="section">
-        <div class="left">
-          <h3>Why homeowners choose us</h3>
-          <p class="tagline">Straightforward communication, clean job sites, and work you can be proud of.</p>
-
-          <div class="list">
-            <div class="item">
-              <strong>Clear estimates</strong>
-              <span>No guessing games</span>
-            </div>
-            <div class="item">
-              <strong>Code-first mindset</strong>
-              <span>Inspection-ready work</span>
-            </div>
-            <div class="item">
-              <strong>Respect for your home</strong>
-              <span>Clean & organized</span>
+            <div class="hero-actions">
+              <a class="btn secondary" href="tel:16266242544">🇺🇸 Call (English)</a>
+              <a class="btn secondary" href="tel:16265593219">🇲🇽 Llamar (Español)</a>
             </div>
           </div>
         </div>
 
-        <div class="right">
-          <h3>Service Area</h3>
-          <p class="tagline">
-            Serving <strong>[Your City]</strong> and surrounding areas. Replace this text with the cities/zip codes your dad works in.
-          </p>
+        <div class="hero-right" id="get-started">
+          <div class="form-card">
+            <h2>Get a Callback</h2>
+            <p>Tell us what you want to remodel and we’ll reach out to schedule a free estimate.</p>
 
-          <div class="list">
-            <div class="item"><strong>Free estimate</strong><span>Call or text anytime</span></div>
-            <div class="item"><strong>Licensed goal</strong><span>Building a long-term local brand</span></div>
-            <div class="item"><strong>Schedule</strong><span>Weekday & weekend availability</span></div>
+            <!-- FORM: replace the action with your Formspree endpoint -->
+            <form action="YOUR_FORMSPREE_ENDPOINT" method="POST">
+              <div>
+                <label>Full Name</label>
+                <input name="name" placeholder="Full Name" required />
+              </div>
+
+              <div class="row">
+                <div>
+                  <label>Phone</label>
+                  <input name="phone" placeholder="Phone Number" required />
+                </div>
+                <div>
+                  <label>Language</label>
+                  <select name="language" required>
+                    <option value="English">English</option>
+                    <option value="Spanish">Spanish</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label>Email (optional)</label>
+                <input name="email" type="email" placeholder="Email" />
+              </div>
+
+              <div class="row">
+                <div>
+                  <label>City</label>
+                  <input name="city" placeholder="City" />
+                </div>
+                <div>
+                  <label>Project Type</label>
+                  <select name="project_type" required>
+                    <option value="Kitchen Remodel">Kitchen Remodel</option>
+                    <option value="Bathroom Remodel">Bathroom Remodel</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label>Project Details</label>
+                <textarea name="details" placeholder="Tell us what you want to change…"></textarea>
+              </div>
+
+              <!-- Helps reduce spam (optional) -->
+              <input type="text" name="_gotcha" style="display:none" />
+
+              <input class="submit" type="submit" value="GET STARTED TODAY" />
+            </form>
+
+            <div class="fineprint">
+              By submitting, you agree we may call/text you about your project. Message/data rates may apply.
+            </div>
           </div>
+        </div>
+      </div>
+
+      <div class="section" id="kitchens">
+        <div class="card span6">
+          <h3>Kitchen Remodeling</h3>
+          <p>Cabinets, countertops, lighting, layout changes, and finish work—planned and built to code.</p>
+        </div>
+        <div class="card span6" id="bathrooms">
+          <h3>Bathroom Remodeling</h3>
+          <p>Tile, showers, tubs, vanities, plumbing updates, ventilation, and modern upgrades.</p>
+        </div>
+      </div>
+
+      <div class="section" id="about">
+        <div class="card span6">
+          <h3>Why homeowners choose us</h3>
+          <p>Straightforward communication, clean job sites, and work you can be proud of.</p>
+        </div>
+        <div class="card span6">
+          <h3>Service Area</h3>
+          <p>Serving <strong>YOUR_CITY</strong> and surrounding areas.</p>
         </div>
       </div>
 
       <footer>
-        <div>© <span id="year"></span> Jay Bob Construction. All rights reserved.</div>
+        <div>© <span id="year"></span> Kitchen &amp; Bathroom Remodeling. All rights reserved.</div>
         <div>Quality • Excellence • Integrity</div>
       </footer>
     </div>
