@@ -16,15 +16,21 @@
         --muted:rgba(255,255,255,0.72);
         --line:rgba(255,255,255,0.14);
 
-        /* red accent */
+        /* Accent (keep your red) */
         --red:#ef4444;
         --redSoft: rgba(239,68,68,0.12);
+
+        /* Light sections (TechMaster vibe) */
+        --paper:#f6f1ea;
+        --paper2:#ffffff;
+        --ink:#0b0f14;
+        --inkMuted: rgba(11,15,20,0.70);
+
         --shadow: 0 18px 60px rgba(0,0,0,0.35);
       }
 
       *{box-sizing:border-box}
-      html, body{margin:0; padding:0;}
-      html{ scroll-behavior: smooth; } /* rolling pages */
+      html, body{margin:0; padding:0; scroll-behavior:smooth;}
       body{
         font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
         background: var(--bg);
@@ -32,23 +38,22 @@
       }
       a{color:inherit; text-decoration:none}
 
-      /* ====== HEADER (TechMaster style) ====== */
+      /* ====== HEADER (DARK to match site) ====== */
       .top{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:14px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:14px;
 
-  padding:18px 22px;
-  background: var(--bg);
-  border-bottom: 1px solid rgba(255,255,255,0.10);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.45);
+        padding:18px 22px;
+        background: var(--bg);
+        border-bottom: 1px solid rgba(255,255,255,0.10);
+        box-shadow: 0 14px 40px rgba(0,0,0,0.45);
 
-  position: sticky;
-  top: 0;
-  z-index: 50;
-}
-
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
 
       .brand{
         display:flex;
@@ -56,20 +61,18 @@
         gap:12px;
       }
       .logo{
-  width:44px;height:44px;border-radius:12px;
-  border:1px solid rgba(255,255,255,0.18);
-  background: rgba(255,255,255,0.06);
-  display:grid; place-items:center;
-  font-weight:900;
-  color: var(--text);
-}
-
+        width:44px;height:44px;border-radius:12px;
+        border:1px solid rgba(255,255,255,0.18);
+        background: rgba(255,255,255,0.06);
+        display:grid; place-items:center;
+        font-weight:900;
+        color: var(--text);
+      }
       .brand-name{
-  font-weight:900;
-  color: var(--text);
-  letter-spacing:-0.2px;
-}
-
+        font-weight:900;
+        color: var(--text);
+        letter-spacing:-0.2px;
+      }
 
       .top-right{
         display:flex;
@@ -78,24 +81,39 @@
         flex-wrap:wrap;
       }
 
+      .nav{
+        display:flex;
+        align-items:center;
+        gap:18px;
+        margin-left: 18px;
+      }
+      .nav a{
+        color: rgba(255,255,255,0.80);
+        font-weight: 800;
+        font-size: 14px;
+      }
+      .nav a:hover{color:#fff;}
+
       /* call boxes */
       .callbox{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding:12px 16px;
-  border-radius:12px;
-  border:1px solid rgba(255,255,255,0.20);
-  background: rgba(239,68,68,0.18);
-  color: #fff;
-  font-weight:900;
-}
+        display:inline-flex;
+        align-items:center;
+        gap:10px;
+        padding:12px 16px;
+        border-radius:12px;
+        border:1px solid rgba(255,255,255,0.20);
+        background: rgba(239,68,68,0.18);
+        color:#fff;
+        font-weight:900;
+        transition: transform .15s ease, background .15s ease;
+        white-space: nowrap;
+      }
       .callbox:hover{
         transform: translateY(-1px);
-        background: rgba(239,68,68,0.18);
+        background: rgba(239,68,68,0.24);
       }
 
-      /* ====== HERO (TechMaster style) ====== */
+      /* ====== HERO (KEEP THIS) ====== */
       .hero{
         display:grid;
         grid-template-columns: 1.15fr 0.85fr;
@@ -116,10 +134,7 @@
         display:flex;
         align-items:center;
       }
-
-      .hero-left-inner{
-        max-width: 720px;
-      }
+      .hero-left-inner{max-width: 720px;}
 
       h1{
         margin: 0 0 16px;
@@ -163,7 +178,6 @@
         justify-content:center;
       }
 
-      /* White form card */
       .form-card{
         width:100%;
         max-width: 520px;
@@ -197,7 +211,7 @@
 
       form{display:grid; gap:12px;}
 
-      input, textarea{
+      input, textarea, select{
         width:100%;
         padding: 12px 12px;
         border-radius: 8px;
@@ -229,71 +243,198 @@
         line-height: 1.4;
       }
 
-      /* ====== ROLLING PAGES SECTIONS ====== */
-      .content{
+      /* ====== LIGHT SECTIONS (TechMaster layout you want) ====== */
+      .light{
+        background: var(--paper);
+        color: var(--ink);
+        padding: 72px 16px;
+      }
+      .light.white{ background: var(--paper2); }
+
+      .wrap{
         max-width: 1180px;
         margin: 0 auto;
-        padding: 0 16px 80px;
       }
 
-      /* each "rolling page" section */
-      section.page{
-        padding: 90px 0;
-        scroll-margin-top: 110px; /* offset sticky header */
-      }
-
-      .section-title{
-        font-size: 28px;
-        font-weight: 900;
-        margin: 0 0 18px;
-        letter-spacing: -0.4px;
-      }
-
-      .grid{
+      .two-col{
         display:grid;
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: 1fr 1fr;
+        gap: 44px;
+        align-items:center;
+      }
+
+      .kicker{
+        font-weight: 900;
+        color: rgba(11,15,20,0.55);
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+
+      .h2{
+        font-size: clamp(34px, 3.2vw, 52px);
+        letter-spacing: -0.8px;
+        line-height: 1.06;
+        margin: 0 0 14px;
+      }
+
+      .p{
+        color: var(--inkMuted);
+        font-size: 18px;
+        line-height: 1.65;
+        margin: 0 0 18px;
+        max-width: 62ch;
+      }
+
+      .btn-yellow{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        padding: 14px 22px;
+        border-radius: 10px;
+        background: #f7b648; /* TechMaster vibe button */
+        color: #0b0f14;
+        font-weight: 900;
+        border: 1px solid rgba(0,0,0,0.10);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+      }
+      .btn-yellow:hover{filter: brightness(0.98); transform: translateY(-1px);}
+
+      .img-card{
+        border-radius: 22px;
+        overflow:hidden;
+        box-shadow: 0 20px 55px rgba(0,0,0,0.18);
+        border: 1px solid rgba(0,0,0,0.08);
+        background:#fff;
+      }
+      .img-card img{
+        width:100%;
+        height:100%;
+        display:block;
+        object-fit: cover;
+      }
+
+      .center-title{
+        text-align:center;
+        margin-bottom: 44px;
+      }
+      .center-title .h2{margin-bottom: 10px;}
+      .center-title .p{margin: 0 auto; max-width: 70ch;}
+
+      /* ====== REVIEWS (simple carousel) ====== */
+      .reviews-wrap{
+        max-width: 980px;
+        margin: 0 auto;
+        text-align:center;
+      }
+      .stars{
+        display:flex;
+        justify-content:center;
+        gap: 10px;
+        font-size: 28px;
+        margin-bottom: 10px;
+        color: #f7b648;
+      }
+      .trusted{
+        font-weight: 900;
+        margin-bottom: 28px;
+      }
+
+      .carousel{
+        position: relative;
+        overflow:hidden;
+      }
+      .slides{
+        display:flex;
+        transition: transform .5s ease;
+      }
+      .slide{
+        min-width: 100%;
+        padding: 10px 16px 24px;
+      }
+      .quote{
+        font-size: 20px;
+        line-height: 1.7;
+        color: rgba(11,15,20,0.72);
+        font-style: italic;
+        margin: 0 auto 18px;
+        max-width: 70ch;
+      }
+      .person{
+        display:flex;
+        justify-content:center;
+        align-items:center;
         gap: 14px;
       }
-
-      .card{
-        grid-column: span 6;
-        border: 1px solid var(--line);
-        background: rgba(255,255,255,0.06);
-        border-radius: 18px;
-        padding: 18px;
-        box-shadow: 0 14px 40px rgba(0,0,0,0.35);
-      }
-
-      .card h3{margin:0 0 10px; font-size: 20px;}
-      .card p{margin:0; color: var(--muted); line-height: 1.6; font-size: 15px}
-
-      .card.full{grid-column: span 12;}
-
-      .gallery{
-        margin-top: 14px;
+      .avatar{
+        width: 56px;
+        height: 56px;
+        border-radius: 999px;
+        background: rgba(0,0,0,0.08);
         display:grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
+        place-items:center;
+        font-weight: 900;
       }
-      .gallery img{
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 14px;
-        border: 1px solid rgba(255,255,255,0.14);
-        background: rgba(255,255,255,0.03);
+      .who{
+        text-align:left;
+      }
+      .who .name{
+        font-weight: 900;
+        font-size: 18px;
+      }
+      .who .city{
+        color: #f7b648;
+        font-weight: 900;
+        margin-top: 2px;
       }
 
-      footer{
-        margin-top: 20px;
+      .dots{
+        display:flex;
+        justify-content:center;
+        gap: 8px;
+        margin: 10px 0 18px;
+      }
+      .dot{
+        width: 8px; height: 8px;
+        border-radius: 999px;
+        background: rgba(0,0,0,0.20);
+        cursor:pointer;
+      }
+      .dot.active{ background: rgba(0,0,0,0.70); }
+
+      .arrow{
+        position:absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        background: rgba(255,255,255,0.85);
+        border: 1px solid rgba(0,0,0,0.10);
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        cursor:pointer;
+        box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+      }
+      .arrow:hover{filter: brightness(0.98)}
+      .arrow.left{left: 10px;}
+      .arrow.right{right: 10px;}
+
+      /* ====== FOOTER (dark again) ====== */
+      .dark-footer{
+        background: var(--bg);
+        color: rgba(255,255,255,0.70);
+        padding: 40px 16px;
+        border-top: 1px solid rgba(255,255,255,0.10);
+      }
+      .foot{
+        max-width: 1180px;
+        margin: 0 auto;
         display:flex;
         justify-content:space-between;
-        gap:12px;
+        gap: 12px;
         flex-wrap:wrap;
-        color: rgba(255,255,255,0.60);
         font-size: 13px;
-        padding-top: 30px;
-        border-top: 1px solid rgba(255,255,255,0.10);
       }
 
       /* ====== Responsive ====== */
@@ -301,10 +442,8 @@
         .hero{grid-template-columns: 1fr; min-height: auto;}
         .hero-left{padding: 46px 18px;}
         .hero-right{padding: 18px;}
-        .card{grid-column: span 12;}
-        .gallery{grid-template-columns: 1fr;}
-        .gallery img{height: 240px;}
-        section.page{padding: 70px 0;}
+        .two-col{grid-template-columns: 1fr;}
+        .nav{display:none;} /* keep header clean on mobile */
       }
     </style>
   </head>
@@ -315,6 +454,13 @@
       <div class="brand">
         <div class="logo">JB</div>
         <div class="brand-name">Jay Bob Construction</div>
+
+        <nav class="nav">
+          <a href="#services">Services</a>
+          <a href="#kitchen">Kitchen</a>
+          <a href="#bathroom">Bathroom</a>
+          <a href="#reviews">Reviews</a>
+        </nav>
       </div>
 
       <div class="top-right">
@@ -323,8 +469,8 @@
       </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
+    <!-- HERO (KEEP) -->
+    <section class="hero" id="top">
       <div class="hero-left">
         <div class="hero-left-inner">
           <h1>Upgrade Your Kitchen &amp; Bathroom with Work You Can Trust.</h1>
@@ -358,70 +504,203 @@
       </div>
     </section>
 
-    <!-- ROLLING PAGES -->
-    <main class="content">
-      <!-- KITCHEN SECTION -->
-      <section id="kitchen" class="page">
-        <h2 class="section-title">Kitchen Remodeling</h2>
+    <!-- ABOUT (light section like your screenshots) -->
+    <section class="light" id="about">
+      <div class="wrap two-col">
+        <div class="img-card">
+          <img src="images/about.jpg" alt="Jay Bob Construction team / jobsite" />
+        </div>
 
-        <div class="grid">
-          <div class="card full">
-            <h3>Kitchen Projects</h3>
-            <p>Cabinets, countertops, lighting, layout changes, and finish work—planned and built to code.</p>
+        <div>
+          <div class="kicker">Trusted • Local • Professional</div>
+          <h2 class="h2">Trusted General Contractor in Los Angeles</h2>
+          <p class="p">
+            At Jay Bob Construction, we believe every home should reflect the people living in it.
+            We help homeowners across Los Angeles transform kitchens and bathrooms into clean, modern,
+            functional spaces—built with care and clear communication.
+          </p>
+          <p class="p">
+            Our approach is simple: listen first, plan carefully, and build with precision.
+            The goal is work you’ll be proud of for years.
+          </p>
+          <a class="btn-yellow" href="#free-quote">Request Free Quote</a>
+        </div>
+      </div>
+    </section>
 
-            <!-- Replace these with your real photos -->
-            <div class="gallery">
-              <img src="images/kitchen1.jpg" alt="Kitchen remodel 1" />
-              <img src="images/kitchen2.jpg" alt="Kitchen remodel 2" />
-              <img src="images/kitchen3.jpg" alt="Kitchen remodel 3" />
+    <!-- SERVICES INTRO -->
+    <section class="light white" id="services">
+      <div class="wrap">
+        <div class="center-title">
+          <h2 class="h2">Our Remodeling Services</h2>
+          <p class="p">
+            Transparent pricing, honest guidance, and clean execution. We specialize in kitchens and bathrooms—
+            designed to fit your lifestyle and built to last.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- KITCHEN -->
+    <section class="light" id="kitchen">
+      <div class="wrap two-col">
+        <div class="img-card">
+          <img src="images/kitchen1.jpg" alt="Kitchen remodeling project" />
+        </div>
+        <div>
+          <div class="kicker">Kitchen Remodeling</div>
+          <h2 class="h2">Kitchen Remodeling</h2>
+          <p class="p">
+            The kitchen is the heart of the home. We transform outdated kitchens into modern, functional spaces
+            where families love to gather—from cabinetry and countertops to lighting and layout upgrades.
+          </p>
+          <a class="btn-yellow" href="#free-quote">Request Free Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BATHROOM (swap sides like the screenshots) -->
+    <section class="light white" id="bathroom">
+      <div class="wrap two-col">
+        <div>
+          <div class="kicker">Bathroom Remodeling</div>
+          <h2 class="h2">Bathroom Remodeling</h2>
+          <p class="p">
+            Create a relaxing retreat with clean tilework, upgraded vanities, modern fixtures, and spa-inspired
+            finishes. We focus on comfort, style, and a smooth process.
+          </p>
+          <a class="btn-yellow" href="#free-quote">Request Free Quote</a>
+        </div>
+        <div class="img-card">
+          <img src="images/bathroom1.jpg" alt="Bathroom remodeling project" />
+        </div>
+      </div>
+    </section>
+
+    <!-- EXTRA SERVICES (optional but matches your screenshots) -->
+    <section class="light" id="more">
+      <div class="wrap two-col">
+        <div class="img-card">
+          <img src="images/living1.jpg" alt="Living space remodel" />
+        </div>
+        <div>
+          <div class="kicker">Upgrades & Layouts</div>
+          <h2 class="h2">Living &amp; Open Spaces</h2>
+          <p class="p">
+            We reconfigure layouts, bring in natural light, and upgrade finishes to create inviting living areas.
+            If you’re opening up your home, we make the transition seamless and stress-free.
+          </p>
+          <a class="btn-yellow" href="#free-quote">Request Free Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="light white" id="wholehome">
+      <div class="wrap two-col">
+        <div>
+          <div class="kicker">Renovations</div>
+          <h2 class="h2">Whole-Home Renovations</h2>
+          <p class="p">
+            From structural improvements to finishing touches, we handle full renovation projects with care.
+            Every renovation is designed to add long-term value and fit your lifestyle.
+          </p>
+          <a class="btn-yellow" href="#free-quote">Request Free Quote</a>
+        </div>
+        <div class="img-card">
+          <img src="images/wholehome1.jpg" alt="Whole home renovation" />
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS (carousel like screenshot) -->
+    <section class="light" id="reviews">
+      <div class="reviews-wrap">
+        <div class="stars">★★★★★</div>
+        <div class="trusted">Trusted by homeowners in Los Angeles</div>
+
+        <div class="carousel" aria-label="Reviews carousel">
+          <button class="arrow left" id="prev" aria-label="Previous review">‹</button>
+
+          <div class="slides" id="slides">
+            <div class="slide">
+              <p class="quote">“They turned our outdated space into something modern and functional — we couldn’t be happier.”</p>
+              <div class="person">
+                <div class="avatar">S</div>
+                <div class="who">
+                  <div class="name">Sophia L.</div>
+                  <div class="city">Los Angeles</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <p class="quote">“Professional and reliable. Jay Bob delivered exactly what they promised.”</p>
+              <div class="person">
+                <div class="avatar">E</div>
+                <div class="who">
+                  <div class="name">Evelyn S.</div>
+                  <div class="city">Cerritos</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <p class="quote">“Flawless from start to finish. Our kitchen looks incredible and the team finished ahead of schedule.”</p>
+              <div class="person">
+                <div class="avatar">M</div>
+                <div class="who">
+                  <div class="name">Miguel A.</div>
+                  <div class="city">Los Angeles</div>
+                </div>
+              </div>
             </div>
           </div>
+
+          <button class="arrow right" id="next" aria-label="Next review">›</button>
         </div>
-      </section>
 
-      <!-- BATHROOM SECTION -->
-      <section id="bathroom" class="page">
-        <h2 class="section-title">Bathroom Remodeling</h2>
-
-        <div class="grid">
-          <div class="card full">
-            <h3>Bathroom Projects</h3>
-            <p>Tile, showers, tubs, vanities, plumbing updates, ventilation, and modern upgrades.</p>
-
-            <!-- Replace these with your real photos -->
-            <div class="gallery">
-              <img src="images/bath1.jpg" alt="Bathroom remodel 1" />
-              <img src="images/bath2.jpg" alt="Bathroom remodel 2" />
-              <img src="images/bath3.jpg" alt="Bathroom remodel 3" />
-            </div>
-          </div>
+        <div class="dots" id="dots" aria-label="Review dots">
+          <div class="dot active" data-i="0"></div>
+          <div class="dot" data-i="1"></div>
+          <div class="dot" data-i="2"></div>
         </div>
-      </section>
 
-      <!-- REVIEWS SECTION -->
-      <section id="reviews" class="page">
-        <h2 class="section-title">Reviews</h2>
+        <a class="btn-yellow" href="#free-quote">Request Free Quote</a>
+      </div>
+    </section>
 
-        <div class="grid">
-          <div class="card full">
-            <h3>What homeowners say</h3>
-            <p>
-              ⭐️⭐️⭐️⭐️⭐️ “Clean work and great communication.”<br/>
-              ⭐️⭐️⭐️⭐️⭐️ “On time and the results were amazing.”<br/>
-              ⭐️⭐️⭐️⭐️⭐️ “Easy to work with — would recommend.”
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <footer>
+    <!-- FOOTER -->
+    <footer class="dark-footer">
+      <div class="foot">
         <div>© <span id="year"></span> Jay Bob Construction. All rights reserved.</div>
         <div>Quality • Excellence • Integrity</div>
-      </footer>
-    </main>
+      </div>
+    </footer>
 
     <script>
+      // Year
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Reviews carousel
+      const slides = document.getElementById("slides");
+      const dots = Array.from(document.querySelectorAll(".dot"));
+      const prev = document.getElementById("prev");
+      const next = document.getElementById("next");
+      let idx = 0;
+
+      function go(i){
+        idx = (i + 3) % 3;
+        slides.style.transform = `translateX(-${idx * 100}%)`;
+        dots.forEach(d => d.classList.remove("active"));
+        dots[idx].classList.add("active");
+      }
+
+      prev.addEventListener("click", () => go(idx - 1));
+      next.addEventListener("click", () => go(idx + 1));
+      dots.forEach(d => d.addEventListener("click", () => go(Number(d.dataset.i))));
+
+      // Optional auto-advance
+      setInterval(() => go(idx + 1), 8000);
     </script>
   </body>
 </html>
