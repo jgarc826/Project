@@ -16,7 +16,7 @@
         --muted:rgba(255,255,255,0.72);
         --line:rgba(255,255,255,0.14);
 
-        /* your red accent */
+        /* red accent */
         --red:#ef4444;
         --redSoft: rgba(239,68,68,0.12);
         --shadow: 0 18px 60px rgba(0,0,0,0.35);
@@ -24,6 +24,7 @@
 
       *{box-sizing:border-box}
       html, body{margin:0; padding:0;}
+      html{ scroll-behavior: smooth; } /* rolling pages */
       body{
         font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
         background: var(--bg);
@@ -74,7 +75,7 @@
         flex-wrap:wrap;
       }
 
-      /* call boxes like TechMaster but with your red tint */
+      /* call boxes */
       .callbox{
         display:inline-flex;
         align-items:center;
@@ -101,7 +102,6 @@
         width: 100%;
         overflow:hidden;
 
-        /* big background image behind both sides */
         background:
           radial-gradient(1200px 700px at 30% 30%, rgba(0,0,0,0.35), transparent 65%),
           linear-gradient(90deg, rgba(0,0,0,0.72), rgba(0,0,0,0.25)),
@@ -162,7 +162,7 @@
         justify-content:center;
       }
 
-      /* White form card like TechMaster */
+      /* White form card */
       .form-card{
         width:100%;
         max-width: 520px;
@@ -228,18 +228,24 @@
         line-height: 1.4;
       }
 
-      /* ====== BELOW THE FOLD SECTIONS (keeps your other code idea) ====== */
+      /* ====== ROLLING PAGES SECTIONS ====== */
       .content{
         max-width: 1180px;
         margin: 0 auto;
-        padding: 34px 16px 80px;
+        padding: 0 16px 80px;
+      }
+
+      /* each "rolling page" section */
+      section.page{
+        padding: 90px 0;
+        scroll-margin-top: 110px; /* offset sticky header */
       }
 
       .section-title{
-        font-size: 22px;
+        font-size: 28px;
         font-weight: 900;
-        margin: 0 0 14px;
-        letter-spacing: -0.3px;
+        margin: 0 0 18px;
+        letter-spacing: -0.4px;
       }
 
       .grid{
@@ -253,32 +259,29 @@
         border: 1px solid var(--line);
         background: rgba(255,255,255,0.06);
         border-radius: 18px;
-        padding: 16px;
+        padding: 18px;
         box-shadow: 0 14px 40px rgba(0,0,0,0.35);
       }
 
-      .card h3{margin:0 0 8px}
-      .card p{margin:0; color: var(--muted); line-height: 1.55; font-size: 14px}
+      .card h3{margin:0 0 10px; font-size: 20px;}
+      .card p{margin:0; color: var(--muted); line-height: 1.6; font-size: 15px}
 
       .card.full{grid-column: span 12;}
 
-      .link-row{
-        display:flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        margin-top: 12px;
+      .gallery{
+        margin-top: 14px;
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
       }
-      .link-pill{
-        display:inline-flex;
-        align-items:center;
-        padding: 10px 14px;
-        border-radius: 999px;
+      .gallery img{
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 14px;
         border: 1px solid rgba(255,255,255,0.14);
-        background: rgba(255,255,255,0.06);
-        color: rgba(255,255,255,0.85);
-        font-weight: 800;
+        background: rgba(255,255,255,0.03);
       }
-      .link-pill:hover{background: rgba(255,255,255,0.09);}
 
       footer{
         margin-top: 20px;
@@ -288,6 +291,8 @@
         flex-wrap:wrap;
         color: rgba(255,255,255,0.60);
         font-size: 13px;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255,255,255,0.10);
       }
 
       /* ====== Responsive ====== */
@@ -296,6 +301,9 @@
         .hero-left{padding: 46px 18px;}
         .hero-right{padding: 18px;}
         .card{grid-column: span 12;}
+        .gallery{grid-template-columns: 1fr;}
+        .gallery img{height: 240px;}
+        section.page{padding: 70px 0;}
       }
     </style>
   </head>
@@ -349,39 +357,61 @@
       </div>
     </section>
 
-    <!-- BELOW THE FOLD (keep other code / sections) -->
+    <!-- ROLLING PAGES -->
     <main class="content">
-      <h2 class="section-title">What we do</h2>
+      <!-- KITCHEN SECTION -->
+      <section id="kitchen" class="page">
+        <h2 class="section-title">Kitchen Remodeling</h2>
 
-      <div class="grid">
-        <div class="card" id="kitchen">
-          <h3>Kitchen Remodeling</h3>
-          <p>Cabinets, countertops, lighting, layout changes, and finish work—planned and built to code.</p>
-          <div class="link-row">
-            <a class="link-pill" href="kitchen.html">View kitchen projects →</a>
+        <div class="grid">
+          <div class="card full">
+            <h3>Kitchen Projects</h3>
+            <p>Cabinets, countertops, lighting, layout changes, and finish work—planned and built to code.</p>
+
+            <!-- Replace these with your real photos -->
+            <div class="gallery">
+              <img src="images/kitchen1.jpg" alt="Kitchen remodel 1" />
+              <img src="images/kitchen2.jpg" alt="Kitchen remodel 2" />
+              <img src="images/kitchen3.jpg" alt="Kitchen remodel 3" />
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="card" id="bathroom">
-          <h3>Bathroom Remodeling</h3>
-          <p>Tile, showers, tubs, vanities, plumbing updates, ventilation, and modern upgrades.</p>
-          <div class="link-row">
-            <a class="link-pill" href="bathroom.html">View bathroom projects →</a>
+      <!-- BATHROOM SECTION -->
+      <section id="bathroom" class="page">
+        <h2 class="section-title">Bathroom Remodeling</h2>
+
+        <div class="grid">
+          <div class="card full">
+            <h3>Bathroom Projects</h3>
+            <p>Tile, showers, tubs, vanities, plumbing updates, ventilation, and modern upgrades.</p>
+
+            <!-- Replace these with your real photos -->
+            <div class="gallery">
+              <img src="images/bath1.jpg" alt="Bathroom remodel 1" />
+              <img src="images/bath2.jpg" alt="Bathroom remodel 2" />
+              <img src="images/bath3.jpg" alt="Bathroom remodel 3" />
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="card full" id="reviews">
-          <h3>Reviews</h3>
-          <p>
-            ⭐️⭐️⭐️⭐️⭐️ “Clean work and great communication.”<br/>
-            ⭐️⭐️⭐️⭐️⭐️ “On time and the results were amazing.”<br/>
-            ⭐️⭐️⭐️⭐️⭐️ “Easy to work with — would recommend.”
-          </p>
-          <div class="link-row">
-            <a class="link-pill" href="reviews.html">Read more reviews →</a>
+      <!-- REVIEWS SECTION -->
+      <section id="reviews" class="page">
+        <h2 class="section-title">Reviews</h2>
+
+        <div class="grid">
+          <div class="card full">
+            <h3>What homeowners say</h3>
+            <p>
+              ⭐️⭐️⭐️⭐️⭐️ “Clean work and great communication.”<br/>
+              ⭐️⭐️⭐️⭐️⭐️ “On time and the results were amazing.”<br/>
+              ⭐️⭐️⭐️⭐️⭐️ “Easy to work with — would recommend.”
+            </p>
           </div>
         </div>
-      </div>
+      </section>
 
       <footer>
         <div>© <span id="year"></span> Jay Bob Construction. All rights reserved.</div>
