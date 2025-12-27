@@ -1,26 +1,320 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta name="description" content="Jay Bob Remodeling & Construction specializes in kitchen remodels, bathroom remodels, home additions, and ADUs. Call today for a free estimate." />
-    <title>Jay Bob Construction</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jay Bob Remodeling & Construction</title>
+    <meta
+      name="description"
+      content="Jay Bob Remodeling & Construction specializes in kitchen remodels, bathroom remodels, home additions, and ADUs. Call today for a free estimate."
+    />
+
+    <style>
+      :root {
+        --bg: #0b0f14;
+        --card: rgba(255, 255, 255, 0.06);
+        --card2: rgba(255, 255, 255, 0.08);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.7);
+        --line: rgba(255, 255, 255, 0.14);
+        --shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+        --radius: 18px;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+          "Segoe UI Emoji";
+        color: var(--text);
+        background: radial-gradient(1200px 800px at 15% 10%, rgba(255, 255, 255, 0.08), transparent 60%),
+          radial-gradient(900px 700px at 85% 20%, rgba(255, 255, 255, 0.06), transparent 60%),
+          linear-gradient(180deg, #070a0f, #0b0f14);
+        min-height: 100vh;
+      }
+
+      .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 28px 18px 64px;
+      }
+
+      /* top bar */
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 22px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: var(--text);
+      }
+      .logo {
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, rgba(255,255,255,0.22), rgba(255,255,255,0.06));
+        border: 1px solid var(--line);
+        display: grid;
+        place-items: center;
+        box-shadow: var(--shadow);
+      }
+      .logo span { font-weight: 800; letter-spacing: 0.5px; }
+      .brand-name { font-weight: 800; letter-spacing: 0.2px; }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--muted);
+        text-decoration: none;
+        transition: transform 0.15s ease, background 0.15s ease;
+      }
+      .pill:hover {
+        transform: translateY(-1px);
+        background: rgba(255, 255, 255, 0.07);
+      }
+
+      /* hero */
+      .hero {
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+        border-radius: var(--radius);
+        padding: 34px 28px;
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: -120px -140px auto auto;
+        width: 360px;
+        height: 360px;
+        background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.16), transparent 55%);
+        filter: blur(0px);
+      }
+      .kicker {
+        display: inline-flex;
+        gap: 10px;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.04);
+        color: var(--muted);
+        font-size: 13px;
+      }
+      h1 {
+        font-size: clamp(32px, 5vw, 52px);
+        margin: 14px 0 10px;
+        line-height: 1.08;
+        letter-spacing: -0.7px;
+      }
+      .sub {
+        font-size: 16px;
+        color: var(--muted);
+        max-width: 62ch;
+        line-height: 1.6;
+        margin: 0 0 18px;
+      }
+      .cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 10px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 16px;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        text-decoration: none;
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.06);
+        transition: transform 0.15s ease, background 0.15s ease;
+      }
+      .btn:hover { transform: translateY(-1px); background: rgba(255, 255, 255, 0.09); }
+      .btn.primary {
+        background: rgba(255, 255, 255, 0.14);
+        border-color: rgba(255, 255, 255, 0.24);
+        font-weight: 700;
+      }
+
+      /* grid */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 14px;
+        margin-top: 16px;
+      }
+      .card {
+        grid-column: span 4;
+        border: 1px solid var(--line);
+        background: var(--card);
+        border-radius: var(--radius);
+        padding: 16px;
+        box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+      }
+      .card h3 { margin: 0 0 6px; font-size: 16px; }
+      .card p { margin: 0; color: var(--muted); line-height: 1.55; font-size: 14px; }
+
+      /* sections */
+      .section {
+        margin-top: 22px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 14px;
+      }
+      .section .left {
+        grid-column: span 5;
+        border: 1px solid var(--line);
+        background: var(--card);
+        border-radius: var(--radius);
+        padding: 18px;
+      }
+      .section .right {
+        grid-column: span 7;
+        border: 1px solid var(--line);
+        background: var(--card);
+        border-radius: var(--radius);
+        padding: 18px;
+      }
+      .tagline { color: var(--muted); margin-top: 8px; line-height: 1.6; }
+      .list {
+        display: grid;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .item {
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.04);
+        border-radius: 14px;
+        padding: 12px 12px;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: center;
+      }
+      .item span { color: var(--muted); font-size: 14px; }
+      .item strong { font-size: 14px; }
+
+      /* footer */
+      footer {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 13px;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+        opacity: 0.9;
+      }
+
+      /* responsive */
+      @media (max-width: 900px) {
+        .card { grid-column: span 12; }
+        .section .left, .section .right { grid-column: span 12; }
+      }
+    </style>
   </head>
+
   <body>
-    <body>
-        <h1>Jay Bob Remodeling & Construction</h1>
-        <h2>Remodels • Additions • ADUs</h2>
-      
-        <p>
-          We specialize in kitchen remodels, bathroom remodels, home additions,
-          and ADU construction for homeowners in our local area.
+    <div class="wrap">
+      <div class="top">
+        <a class="brand" href="#">
+          <div class="logo"><span>JB</span></div>
+          <div class="brand-name">Jay Bob Construction</div>
+        </a>
+
+        <!-- Replace the phone number -->
+        <a class="pill" href="tel:15555555555">📞 Call/Text: (555) 555-5555</a>
+      </div>
+
+      <div class="hero">
+        <div class="kicker">🏡 Residential Remodeling • Additions • ADUs</div>
+        <h1>Quality work that passes inspection—and looks amazing.</h1>
+        <p class="sub">
+          We help homeowners upgrade kitchens and bathrooms, build additions, and create ADUs with clean planning,
+          solid craftsmanship, and clear communication from start to finish.
         </p>
-      
-        <p>
-          Quality. Excellence. Integrity.
-        </p>
-      
-        <p>
-          📞 Call or Text: <strong>YOUR_PHONE_NUMBER</strong>
-        </p>
-      </body>
+
+        <div class="cta">
+          <!-- Replace email/phone -->
+          <a class="btn primary" href="tel:15555555555">📞 Call for an Estimate</a>
+          <a class="btn" href="mailto:youremail@example.com">✉️ Request a Quote</a>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Kitchen Remodels</h3>
+          <p>Cabinets, counters, lighting, layout changes, and clean finishes—done right.</p>
+        </div>
+        <div class="card">
+          <h3>Bathroom Remodels</h3>
+          <p>Tile, showers, vanities, plumbing updates, ventilation, and modern upgrades.</p>
+        </div>
+        <div class="card">
+          <h3>ADUs & Additions</h3>
+          <p>Garage conversions, room additions, and ADU builds—planned to meet code and budget.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="left">
+          <h3>Why homeowners choose us</h3>
+          <p class="tagline">Straightforward communication, clean job sites, and work you can be proud of.</p>
+
+          <div class="list">
+            <div class="item">
+              <strong>Clear estimates</strong>
+              <span>No guessing games</span>
+            </div>
+            <div class="item">
+              <strong>Code-first mindset</strong>
+              <span>Inspection-ready work</span>
+            </div>
+            <div class="item">
+              <strong>Respect for your home</strong>
+              <span>Clean & organized</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <h3>Service Area</h3>
+          <p class="tagline">
+            Serving <strong>[Your City]</strong> and surrounding areas. Replace this text with the cities/zip codes your dad works in.
+          </p>
+
+          <div class="list">
+            <div class="item"><strong>Free estimate</strong><span>Call or text anytime</span></div>
+            <div class="item"><strong>Licensed goal</strong><span>Building a long-term local brand</span></div>
+            <div class="item"><strong>Schedule</strong><span>Weekday & weekend availability</span></div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div>© <span id="year"></span> Jay Bob Construction. All rights reserved.</div>
+        <div>Quality • Excellence • Integrity</div>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
