@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kitchen & Bathroom Remodeling</title>
+    <title>Jay Bob Construction | Kitchen & Bathroom Remodeling</title>
     <meta
       name="description"
-      content="Kitchen & Bathroom Remodeling specialists. Request a callback for a free estimate."
+      content="Jay Bob Construction — Kitchen & Bathroom Remodeling in Los Angeles. Request a free quote."
     />
 
     <style>
@@ -15,408 +15,379 @@
         --text:rgba(255,255,255,0.92);
         --muted:rgba(255,255,255,0.72);
         --line:rgba(255,255,255,0.14);
-        --card:rgba(255,255,255,0.06);
-        --shadow:0 20px 60px rgba(0,0,0,0.55);
-        --radius:18px;
-        --accent:#1f6feb;
-        --accent2:#94a3b8;
+
+        /* your red accent */
+        --red:#ef4444;
+        --redSoft: rgba(239,68,68,0.12);
+        --shadow: 0 18px 60px rgba(0,0,0,0.35);
       }
+
       *{box-sizing:border-box}
+      html, body{margin:0; padding:0;}
       body{
-        margin:0;
-        font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-        color:var(--text);
-        background:linear-gradient(180deg,#070a0f,#0b0f14);
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+        background: var(--bg);
+        color: var(--text);
       }
-      a{color:inherit}
-      .wrap{
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0;
-}
-      /* top nav */
+      a{color:inherit; text-decoration:none}
+
+      /* ====== HEADER (TechMaster style) ====== */
       .top{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:14px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:14px;
 
-  padding:18px 18px;
-  background:#ffffff;
-  border:1px solid rgba(0,0,0,0.08);
-  border-radius:0px;            /* TechMaster is flat */
-  box-shadow:0 18px 55px rgba(0,0,0,0.20);
+        padding:18px 22px;
+        background:#ffffff;
+        border-bottom: 1px solid rgba(0,0,0,0.10);
+        box-shadow: 0 18px 55px rgba(0,0,0,0.20);
 
-  position: sticky;
-  top: 0;
-  z-index: 50;
-}
-.top, .top a { color:#0b0f14; }
-.brand div { color:#0b0f14; }
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+
       .brand{
-        display:flex;align-items:center;gap:10px;text-decoration:none;
+        display:flex;
+        align-items:center;
+        gap:12px;
       }
       .logo{
-        width:44px;height:44px;border-radius:14px;
-        background:linear-gradient(135deg,rgba(255,255,255,0.22),rgba(255,255,255,0.06));
-        border:1px solid var(--line);
-        display:grid;place-items:center;
+        width:44px;height:44px;border-radius:12px;
+        border:1px solid rgba(0,0,0,0.10);
+        background: rgba(0,0,0,0.03);
+        display:grid; place-items:center;
+        font-weight:900;
+        color:#0b0f14;
       }
-      .logo span{font-weight:900;letter-spacing:.5px}
-      .nav{
-        display:flex;align-items:center;gap:14px;flex-wrap:wrap;
-        color:var(--muted);font-size:14px;
+      .brand-name{
+        font-weight:900;
+        color:#0b0f14;
+        letter-spacing:-0.2px;
       }
-      .nav a{
-        text-decoration:none;
-        padding:8px 10px;border-radius:999px;border:1px solid transparent;
-      }
-      .nav a:hover{border-color:var(--line);background:rgba(255,255,255,0.04)}
+
       .top-right{
-        display:flex;align-items:center;gap:10px;flex-wrap:wrap;
-      }
-      .pill{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding:12px 16px;
-  border-radius:12px;
-  border:1px solid rgba(0,0,0,0.10);
-  background: rgba(239,68,68,0.12); /* subtle red tint */
-  color:#0b0f14;
-  text-decoration:none;
-  font-weight:800;
-}
-.pill:hover{
-  background: rgba(239,68,68,0.18);
-  transform: translateY(-1px);
-}
-      .btn{
-        display:inline-flex;align-items:center;justify-content:center;gap:10px;
-        padding:11px 14px;border-radius:14px;border:1px solid var(--line);
-        text-decoration:none;background:rgba(255,255,255,0.06);
-        transition:transform .15s ease, background .15s ease;
-      }
-      .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,0.09)}
-      .btn.primary{
-  background: rgba(239,68,68,0.95);
-  border-color: rgba(239,68,68,1);
-  font-weight: 900;
-  color: #fff;
-}
-.btn.primary:hover{
-  background: rgba(239,68,68,1);
-}
-
-      /* promo bar (optional) */
-      .promo{
-  margin:10px 0 16px;
-  border:1px solid rgba(148,163,184,0.25);
-  background: linear-gradient(90deg, rgba(148,163,184,0.18), rgba(148,163,184,0.10));
-  border-radius:16px;
-  padding:12px 14px;
-  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
-  box-shadow:0 18px 40px rgba(0,0,0,0.35);
-}
-
-      .promo strong{font-weight:900}
-      .promo .cta{
-  background: rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.14);
-  padding:10px 14px;border-radius:14px;
-  text-decoration:none;font-weight:800;
-}
-
-      /* hero */
-      .hero{
-        border:1px solid var(--line);
-        border-radius:24px;
-        overflow:hidden;
-        box-shadow:var(--shadow);
-        display:grid;
-        grid-template-columns: 1.2fr 0.9fr;
-        min-height: 560px;
-        background:rgba(255,255,255,0.02);
-      }
-      .hero-left{
-        position:relative;
-        padding:34px 30px;
-        display:flex;flex-direction:column;justify-content:flex-end;
-        background:
-          linear-gradient(90deg, rgba(0,0,0,0.60), rgba(0,0,0,0.10)),
-          url("images/hero-kitchen.jpg");
-        background-size:cover;
-        background-position:center;
-      }
-      .badge{
-        position:absolute;top:22px;left:22px;
-        display:inline-flex;align-items:center;gap:10px;
-        padding:8px 12px;border-radius:999px;
-        border:1px solid var(--line);
-        background:rgba(0,0,0,0.35);
-        color:var(--muted);font-size:13px;
-        backdrop-filter: blur(8px);
-      }
-      h1{
-        margin:0 0 10px;
-        font-size:clamp(34px,4vw,56px);
-        letter-spacing:-0.8px;
-        line-height:1.06;
-      }
-      .bullets{
-        margin:0 0 14px;
-        padding:0;
-        list-style:none;
-        color:rgba(255,255,255,0.85);
-        display:grid;
-        gap:8px;
-        max-width: 60ch;
-      }
-      .bullets li{
-        display:flex;gap:10px;align-items:flex-start;
-        font-size:15px;line-height:1.5;
-      }
-      .bullets .dot{
-  background: rgba(148,163,184,0.9);
-  box-shadow: 0 0 0 4px rgba(148,163,184,0.18);
-}
-      .hero-actions{
-        display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;
-      }
-      .hero-actions .btn{backdrop-filter: blur(10px)}
-      .hero-actions .btn.secondary{background:rgba(255,255,255,0.10)}
-
-      /* form card */
-      .hero-right{
-        padding:22px;
-        background:
-          radial-gradient(600px 380px at 30% 20%, rgba(31,111,235,0.22), transparent 65%),
-          linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
         display:flex;
+        align-items:center;
+        gap:12px;
+        flex-wrap:wrap;
       }
+
+      /* call boxes like TechMaster but with your red tint */
+      .callbox{
+        display:inline-flex;
+        align-items:center;
+        gap:10px;
+        padding:12px 16px;
+        border-radius:12px;
+        border:1px solid rgba(0,0,0,0.10);
+        background: var(--redSoft);
+        color:#0b0f14;
+        font-weight:900;
+        transition: transform .15s ease, background .15s ease;
+        white-space: nowrap;
+      }
+      .callbox:hover{
+        transform: translateY(-1px);
+        background: rgba(239,68,68,0.18);
+      }
+
+      /* ====== HERO (TechMaster style) ====== */
+      .hero{
+        display:grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        min-height: 640px;
+        width: 100%;
+        overflow:hidden;
+
+        /* big background image behind both sides */
+        background:
+          radial-gradient(1200px 700px at 30% 30%, rgba(0,0,0,0.35), transparent 65%),
+          linear-gradient(90deg, rgba(0,0,0,0.72), rgba(0,0,0,0.25)),
+          url("images/hero-kitchen.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .hero-left{
+        padding: 64px 70px;
+        display:flex;
+        align-items:center;
+      }
+
+      .hero-left-inner{
+        max-width: 720px;
+      }
+
+      h1{
+        margin: 0 0 16px;
+        font-size: clamp(44px, 4.5vw, 64px);
+        letter-spacing: -1px;
+        line-height: 1.05;
+        text-shadow: 0 10px 40px rgba(0,0,0,0.60);
+      }
+
+      .sub{
+        margin: 0 0 28px;
+        color: rgba(255,255,255,0.82);
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 62ch;
+      }
+
+      .cta{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        padding: 14px 18px;
+        border-radius: 10px;
+        background: rgba(239,68,68,0.95);
+        border: 1px solid rgba(239,68,68,1);
+        color: #fff;
+        font-weight: 900;
+        letter-spacing: 0.2px;
+        cursor:pointer;
+        transition: transform .15s ease, filter .15s ease;
+      }
+      .cta:hover{
+        transform: translateY(-1px);
+        filter: brightness(1.02);
+      }
+
+      .hero-right{
+        padding: 70px 70px 70px 30px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+
+      /* White form card like TechMaster */
       .form-card{
         width:100%;
-        border:1px solid rgba(31,111,235,0.35);
-        background:rgba(12,16,22,0.55);
-        border-radius:22px;
-        padding:18px;
-        box-shadow:0 18px 50px rgba(0,0,0,0.45);
-        backdrop-filter: blur(10px);
-        display:flex;flex-direction:column;
-      }
-      .form-card h2{
-        margin:6px 0 6px;
-        font-size:28px;
-        letter-spacing:-0.4px;
-      }
-      .form-card p{
-        margin:0 0 14px;
-        color:var(--muted);
-        line-height:1.5;
-        font-size:14px;
-      }
-      form{display:grid;gap:10px;margin-top:6px}
-      label{font-size:12px;color:var(--muted)}
-      input, select, textarea{
-        width:100%;
-        padding:12px 12px;
-        border-radius:14px;
-        border:1px solid rgba(255,255,255,0.16);
-        background:rgba(255,255,255,0.06);
-        color:var(--text);
-        outline:none;
-      }
-      textarea{min-height:88px;resize:vertical}
-      input::placeholder, textarea::placeholder{color:rgba(255,255,255,0.45)}
-      .row{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        gap:10px;
-      }
-      .submit{
-        margin-top:6px;
-        background:rgba(239,68,68,0.92);
-        border:1px solid rgba(239,68,68,1);
-        font-weight:900;
-        letter-spacing:0.3px;
-        cursor:pointer;
-      }
-      .fineprint{
-        margin-top:10px;
-        color:rgba(255,255,255,0.6);
-        font-size:12px;
-        line-height:1.4;
+        max-width: 520px;
+        background:#ffffff;
+        border: 1px solid rgba(0,0,0,0.10);
+        border-radius: 18px;
+        padding: 26px;
+        box-shadow: var(--shadow);
       }
 
-      /* sections */
-      .section{
-        margin-top:18px;
+      .form-logo{
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        border: 1px solid rgba(0,0,0,0.10);
+        background: rgba(0,0,0,0.03);
+        display:grid;
+        place-items:center;
+        font-weight: 900;
+        color:#0b0f14;
+        margin: 0 auto 10px;
+      }
+
+      .form-title{
+        margin: 0 0 18px;
+        text-align:center;
+        color:#0b0f14;
+        font-size: 22px;
+        font-weight: 900;
+      }
+
+      form{display:grid; gap:12px;}
+
+      input, textarea{
+        width:100%;
+        padding: 12px 12px;
+        border-radius: 8px;
+        border: 1px solid rgba(0,0,0,0.18);
+        background:#ffffff;
+        color:#0b0f14;
+        outline:none;
+        font-size: 14px;
+      }
+      textarea{min-height: 90px; resize: vertical;}
+      input::placeholder, textarea::placeholder{color:rgba(11,15,20,0.40)}
+
+      .submit{
+        margin-top: 6px;
+        background: rgba(239,68,68,0.95);
+        border: 1px solid rgba(239,68,68,1);
+        color:#fff;
+        font-weight: 900;
+        cursor:pointer;
+        border-radius: 10px;
+        padding: 14px 14px;
+      }
+
+      .fineprint{
+        margin-top: 10px;
+        text-align:center;
+        color: rgba(11,15,20,0.60);
+        font-size: 12px;
+        line-height: 1.4;
+      }
+
+      /* ====== BELOW THE FOLD SECTIONS (keeps your other code idea) ====== */
+      .content{
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 34px 16px 80px;
+      }
+
+      .section-title{
+        font-size: 22px;
+        font-weight: 900;
+        margin: 0 0 14px;
+        letter-spacing: -0.3px;
+      }
+
+      .grid{
         display:grid;
         grid-template-columns: repeat(12, 1fr);
-        gap:14px;
+        gap: 14px;
       }
+
       .card{
-        border:1px solid var(--line);
-        background:var(--card);
-        border-radius:var(--radius);
-        padding:16px;
-        box-shadow:0 14px 40px rgba(0,0,0,0.35);
+        grid-column: span 6;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.06);
+        border-radius: 18px;
+        padding: 16px;
+        box-shadow: 0 14px 40px rgba(0,0,0,0.35);
       }
+
       .card h3{margin:0 0 8px}
-      .card p{margin:0;color:var(--muted);line-height:1.55;font-size:14px}
-      .span6{grid-column: span 6;}
+      .card p{margin:0; color: var(--muted); line-height: 1.55; font-size: 14px}
+
+      .card.full{grid-column: span 12;}
+
+      .link-row{
+        display:flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 12px;
+      }
+      .link-pill{
+        display:inline-flex;
+        align-items:center;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255,255,255,0.14);
+        background: rgba(255,255,255,0.06);
+        color: rgba(255,255,255,0.85);
+        font-weight: 800;
+      }
+      .link-pill:hover{background: rgba(255,255,255,0.09);}
+
       footer{
-        margin-top:18px;
-        color:var(--muted);
-        font-size:13px;
+        margin-top: 20px;
         display:flex;
         justify-content:space-between;
         gap:12px;
         flex-wrap:wrap;
-        opacity:0.9;
+        color: rgba(255,255,255,0.60);
+        font-size: 13px;
       }
 
+      /* ====== Responsive ====== */
       @media (max-width: 980px){
         .hero{grid-template-columns: 1fr; min-height: auto;}
-        .hero-left{min-height: 420px;}
-        .row{grid-template-columns:1fr;}
-        .nav{display:none;} /* keep it clean on mobile */
+        .hero-left{padding: 46px 18px;}
+        .hero-right{padding: 18px;}
+        .card{grid-column: span 12;}
       }
     </style>
   </head>
 
   <body>
-    <div class="wrap">
-      <div class="top">
-        <a class="brand" href="#">
-            <div class="logo"><span>JB</span></div>
-          <div style="font-weight:900;">Jay Bob Construction</div>
-        </a>
+    <!-- HEADER -->
+    <header class="top">
+      <div class="brand">
+        <div class="logo">JB</div>
+        <div class="brand-name">Jay Bob Construction</div>
+      </div>
 
-        <div class="nav">
-            <a href="#kitchen">Kitchen</a>
-            <a href="#bathroom">Bathroom</a>
-            <a href="#reviews">Reviews</a>
-          </div>
-        <div class="top-right">
-          <a class="pill" href="tel:16266242544">🇺🇸 English: (626) 624-2544</a>
-          <a class="pill" href="tel:16265593219">🇲🇽 Español: (626) 559-3219</a>
-          <a class="btn primary" href="#get-started">GET STARTED</a>
+      <div class="top-right">
+        <a class="callbox" href="tel:16266242544">🇺🇸 English: (626) 624-2544</a>
+        <a class="callbox" href="tel:16265593219">🇲🇽 Español: (626) 559-3219</a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-left-inner">
+          <h1>Upgrade Your Kitchen &amp; Bathroom with Work You Can Trust.</h1>
+          <p class="sub">Beautiful, functional spaces built with quality and care — serving Los Angeles.</p>
+          <a class="cta" href="#free-quote">Request Free Quote</a>
         </div>
       </div>
 
-     
+      <div class="hero-right" id="free-quote">
+        <div class="form-card">
+          <div class="form-logo">JB</div>
+          <div class="form-title">Get Started With a Free Estimate</div>
 
-      <div class="hero">
-        <div class="hero-left">
-          <div class="badge">🏡 Kitchen & Bathroom Specialists • Residential Only</div>
+          <!-- Replace YOUR_FORMSPREE_ENDPOINT with your Formspree URL -->
+          <form action="YOUR_FORMSPREE_ENDPOINT" method="POST">
+            <input name="name" placeholder="Name*" required />
+            <input name="phone" placeholder="Phone*" required />
+            <input name="email" type="email" placeholder="Email (optional)" />
+            <textarea name="details" placeholder="Tell about your project."></textarea>
 
-          <div>
-            <h1>Upgrade Your Kitchen &amp; Bathroom with Work You Can Trust.</h1>
+            <!-- spam trap -->
+            <input type="text" name="_gotcha" style="display:none" />
 
-            <ul class="bullets">
-              <li><span class="dot"></span><span>Clear estimates, clean job sites, and honest timelines.</span></li>
-              <li><span class="dot"></span><span>Quality finishes, solid craftsmanship, and code-first work.</span></li>
-              <li><span class="dot"></span><span>English &amp; Spanish speaking.</span></li>
-            </ul>
+            <input class="submit" type="submit" value="Submit" />
+          </form>
 
-            <div class="hero-actions">
-              <a class="btn secondary" href="tel:16266242544">🇺🇸 Call (English)</a>
-              <a class="btn secondary" href="tel:16265593219">🇲🇽 Llamar (Español)</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-right" id="get-started">
-          <div class="form-card">
-            <h2>Get a Callback</h2>
-            <p>Tell us what you want to remodel and we’ll reach out to schedule a free estimate.</p>
-
-            <!-- FORM: replace the action with your Formspree endpoint -->
-            <form action="YOUR_FORMSPREE_ENDPOINT" method="POST">
-              <div>
-                <label>Full Name</label>
-                <input name="name" placeholder="Full Name" required />
-              </div>
-
-              <div class="row">
-                <div>
-                  <label>Phone</label>
-                  <input name="phone" placeholder="Phone Number" required />
-                </div>
-                <div>
-                  <label>Language</label>
-                  <select name="language" required>
-                    <option value="English">English</option>
-                    <option value="Spanish">Spanish</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label>Email (optional)</label>
-                <input name="email" type="email" placeholder="Email" />
-              </div>
-
-              <div class="row">
-                <div>
-                  <label>City</label>
-                  <input name="city" placeholder="City" />
-                </div>
-                <div>
-                  <label>Project Type</label>
-                  <select name="project_type" required>
-                    <option value="Kitchen Remodel">Kitchen Remodel</option>
-                    <option value="Bathroom Remodel">Bathroom Remodel</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label>Project Details</label>
-                <textarea name="details" placeholder="Tell us what you want to change…"></textarea>
-              </div>
-
-              <!-- Helps reduce spam (optional) -->
-              <input type="text" name="_gotcha" style="display:none" />
-
-              <input class="submit" type="submit" value="GET STARTED TODAY" />
-            </form>
-
-            <div class="fineprint">
-              By submitting, you agree we may call/text you about your project. Message/data rates may apply.
-            </div>
+          <div class="fineprint">
+            By submitting, you agree we may call/text you about your project. Message/data rates may apply.
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="section" id="kitchens">
-        <div class="card span6">
+    <!-- BELOW THE FOLD (keep other code / sections) -->
+    <main class="content">
+      <h2 class="section-title">What we do</h2>
+
+      <div class="grid">
+        <div class="card" id="kitchen">
           <h3>Kitchen Remodeling</h3>
           <p>Cabinets, countertops, lighting, layout changes, and finish work—planned and built to code.</p>
+          <div class="link-row">
+            <a class="link-pill" href="kitchen.html">View kitchen projects →</a>
+          </div>
         </div>
-        <div class="card span6" id="bathrooms">
+
+        <div class="card" id="bathroom">
           <h3>Bathroom Remodeling</h3>
           <p>Tile, showers, tubs, vanities, plumbing updates, ventilation, and modern upgrades.</p>
+          <div class="link-row">
+            <a class="link-pill" href="bathroom.html">View bathroom projects →</a>
+          </div>
         </div>
-      </div>
 
-      <div class="section" id="about">
-        <div class="card span6">
-          <h3>Why homeowners choose us</h3>
-          <p>Straightforward communication, clean job sites, and work you can be proud of.</p>
-        </div>
-        <div class="card span6">
-          <h3>Service Area</h3>
-          <p>Serving <strong>YOUR_CITY</strong> and surrounding areas.</p>
+        <div class="card full" id="reviews">
+          <h3>Reviews</h3>
+          <p>
+            ⭐️⭐️⭐️⭐️⭐️ “Clean work and great communication.”<br/>
+            ⭐️⭐️⭐️⭐️⭐️ “On time and the results were amazing.”<br/>
+            ⭐️⭐️⭐️⭐️⭐️ “Easy to work with — would recommend.”
+          </p>
+          <div class="link-row">
+            <a class="link-pill" href="reviews.html">Read more reviews →</a>
+          </div>
         </div>
       </div>
 
       <footer>
-        <div>© <span id="year"></span> Kitchen &amp; Bathroom Remodeling. All rights reserved.</div>
+        <div>© <span id="year"></span> Jay Bob Construction. All rights reserved.</div>
         <div>Quality • Excellence • Integrity</div>
       </footer>
-    </div>
+    </main>
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
