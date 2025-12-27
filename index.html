@@ -19,7 +19,7 @@
         --shadow:0 20px 60px rgba(0,0,0,0.55);
         --radius:18px;
         --accent:#1f6feb;
-        --accent2:#ef4444;
+        --accent2:#94a3b8;
       }
       *{box-sizing:border-box}
       body{
@@ -74,28 +74,30 @@
       }
       .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,0.09)}
       .btn.primary{
-        background:rgba(239,68,68,0.9);
-        border-color:rgba(239,68,68,1);
-        font-weight:800;
-      }
+  background: rgba(148,163,184,0.22);
+  border-color: rgba(148,163,184,0.35);
+  font-weight: 800;
+  color: var(--text);
+}
 
       /* promo bar (optional) */
       .promo{
-        margin:10px 0 16px;
-        border:1px solid rgba(239,68,68,0.35);
-        background:linear-gradient(90deg,rgba(239,68,68,0.92),rgba(239,68,68,0.75));
-        border-radius:16px;
-        padding:12px 14px;
-        display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
-        box-shadow:0 18px 40px rgba(0,0,0,0.35);
-      }
+  margin:10px 0 16px;
+  border:1px solid rgba(148,163,184,0.25);
+  background: linear-gradient(90deg, rgba(148,163,184,0.18), rgba(148,163,184,0.10));
+  border-radius:16px;
+  padding:12px 14px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  box-shadow:0 18px 40px rgba(0,0,0,0.35);
+}
+
       .promo strong{font-weight:900}
       .promo .cta{
-        background:rgba(0,0,0,0.35);
-        border:1px solid rgba(255,255,255,0.18);
-        padding:10px 14px;border-radius:14px;
-        text-decoration:none;font-weight:800;
-      }
+  background: rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.14);
+  padding:10px 14px;border-radius:14px;
+  text-decoration:none;font-weight:800;
+}
 
       /* hero */
       .hero{
@@ -147,11 +149,9 @@
         font-size:15px;line-height:1.5;
       }
       .bullets .dot{
-        width:10px;height:10px;border-radius:999px;margin-top:6px;
-        background:rgba(239,68,68,0.95);
-        box-shadow:0 0 0 4px rgba(239,68,68,0.18);
-        flex:0 0 auto;
-      }
+  background: rgba(148,163,184,0.9);
+  box-shadow: 0 0 0 4px rgba(148,163,184,0.18);
+}
       .hero-actions{
         display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;
       }
@@ -261,16 +261,15 @@
     <div class="wrap">
       <div class="top">
         <a class="brand" href="#">
-          <div class="logo"><span>KB</span></div>
-          <div style="font-weight:900;">Kitchen &amp; Bathroom Remodeling</div>
+            <div class="logo"><span>JB</span></div>
+          <div style="font-weight:900;">Jay Bob Construction</div>
         </a>
 
         <div class="nav">
-          <a href="#kitchens">Kitchens</a>
-          <a href="#bathrooms">Bathrooms</a>
-          <a href="#about">About</a>
-        </div>
-
+            <a href="#kitchen">Kitchen</a>
+            <a href="#bathroom">Bathroom</a>
+            <a href="#reviews">Reviews</a>
+          </div>
         <div class="top-right">
           <a class="pill" href="tel:16266242544">🇺🇸 English: (626) 624-2544</a>
           <a class="pill" href="tel:16265593219">🇲🇽 Español: (626) 559-3219</a>
