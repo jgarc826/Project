@@ -561,22 +561,25 @@
     </section>
 
     <!-- BATHROOM (swap sides like the screenshots) -->
-    <section class="light white" id="bathroom">
-      <div class="wrap two-col">
-        <div>
-          <div class="kicker">Bathroom Remodeling</div>
-          <h2 class="h2">Bathroom Remodeling</h2>
-          <p class="p">
-            Create a relaxing retreat with clean tilework, upgraded vanities, modern fixtures, and spa-inspired
-            finishes. We focus on comfort, style, and a smooth process.
-          </p>
-          <a class="btn-yellow" href="#free-quote">Request Free Quote</a>
+    <section class="gallery-section" id="bathroom-gallery">
+        <h2>Bathroom Remodeling</h2>
+        <p class="gallery-sub">
+          Modern, clean, and built to last. Swipe or scroll to explore our work.
+        </p>
+      
+        <div class="gallery-wrapper">
+          <button class="gallery-btn left" onclick="scrollGallery(-1)">‹</button>
+      
+          <div class="gallery" id="gallery">
+            <img src="images/ChatGPT Image Dec 26, 2025, 10_32_45 PM.png" alt="Bathroom Remodel 1">
+            <img src="images/bathroom2.jpg" alt="Bathroom Remodel 2">
+            <img src="images/bathroom3.jpg" alt="Bathroom Remodel 3">
+            <img src="images/bathroom4.jpg" alt="Bathroom Remodel 4">
+          </div>
+      
+          <button class="gallery-btn right" onclick="scrollGallery(1)">›</button>
         </div>
-        <div class="img-card">
-          <img src="images/bathroom1.jpg" alt="Bathroom remodeling project" />
-        </div>
-      </div>
-    </section>
+      </section>
 
     <!-- EXTRA SERVICES (optional but matches your screenshots) -->
     <section class="light" id="more">
