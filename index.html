@@ -8,8 +8,8 @@
   <style>
     /* Footer logo – small & minimal */
 .footer-logo{
-  width: 150px;        /* SMALL */
-  height: 150px;
+  width: 170px;        /* SMALL */
+  height: 170px;
   border-radius: 50%;
   overflow: hidden;
   margin-top: 10px;
@@ -22,12 +22,36 @@
   display: block;
 }
 
+
+
 /* Mobile */
 @media (max-width: 980px){
   .footer-logo{
-    width: 130px;
-    height: 130px;
+    width: 170px;
+    height: 170px;
   }
+  /* CENTER footer content on mobile */
+@media (max-width: 980px){
+  footer .foot{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .contact-box{
+    text-align: center;
+  }
+
+  footer .footer-logo{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 980px){
+  footer .contact-box{
+    margin-top: 24px;
+  }
+}
   /* CENTER schedule text + image on mobile */
 @media (max-width: 980px){
   #schedule .two-col > div:first-child{
