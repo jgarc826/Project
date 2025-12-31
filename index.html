@@ -284,9 +284,36 @@
 
   <!-- FOOTER -->
   <footer>
+    /* Footer logo circle */
+.footer-logo{
+  width: 90px;
+  height: 90px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  margin-top: 18px;
+}
+
+.footer-logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Smaller on mobile */
+@media (max-width: 980px){
+  .footer-logo{
+    width: 72px;
+    height: 72px;
+  }
     <div class="wrap foot">
       <div>
         <h3>Jay Bob Construction</h3>
+      
+        <div class="footer-logo">
+          <img src="images/logo.jpg" alt="Jay Bob Construction Logo" />
+        </div>
       </div>
 
       <div class="contact-box">
