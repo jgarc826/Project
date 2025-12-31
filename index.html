@@ -298,6 +298,36 @@
       .hero{padding-top:95px;}
       .foot h3{font-size:46px}
     }
+    /* FORCE footer center on mobile */
+@media (max-width: 980px){
+  footer .foot{
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center;
+    text-align: center;
+  }
+
+  footer .foot > div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer h3{
+    text-align: center;
+  }
+
+  footer .footer-logo{
+    margin: 12px auto 0;
+  }
+
+  footer .contact-box{
+    text-align: center;
+    margin-top: 22px;
+  }
+}
   </style>
 </head>
 
