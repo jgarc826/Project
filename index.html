@@ -6,6 +6,33 @@
   <title>Jay Bob Construction | Expert Construction & Remodeling</title>
 
   <style>
+    /* Footer logo – small & minimal */
+.footer-logo{
+  width: 48px;        /* SMALL */
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.footer-logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* keeps logo clean */
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 980px){
+  .footer-logo{
+    width: 42px;
+    height: 42px;
+  }
+}
+.footer-logo{
+  margin-top: 10px;
+}
+
     :root{
       --bg:#ffffff;
       --ink:#0b0f14;
@@ -14,6 +41,7 @@
       --btn:#111;
       --btnText:#fff;
       --max:1200px;
+      
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;scroll-behavior:smooth;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}
@@ -283,30 +311,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    .footer-logo{
-      width: 90px;
-      height: 90px;
-      border-radius: 999px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      margin-top: 18px;
-    }
-    
-    .footer-logo img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    
-    /* Smaller on mobile */
-    @media (max-width: 980px){
-      .footer-logo{
-        width: 72px;
-        height: 72px;
-      }
-    }
+  
     <div class="wrap foot">
       <div>
         <h3>Jay Bob Construction</h3>
