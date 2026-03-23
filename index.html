@@ -1,342 +1,391 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Social preview -->
-<meta property="og:title" content="Jay Bob Construction">
-<meta property="og:description" content="Expert Construction and Remodeling">
-<meta property="og:image" content="https://jaybobconstruction.com/images/Jay Bob Construction logo design.png">
-<meta property="og:url" content="https://jaybobconstruction.com/images/Jay Bob Construction logo design.png">
-<meta property="og:type" content="website">
-
-<!-- Twitter/X -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Jay Bob Construction">
-<meta name="twitter:description" content="Expert Construction and Remodeling">
-<meta name="twitter:image" content="https://jaybobconstruction.com/images/Jay Bob Construction logo design.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jay Bob Construction | Expert Construction & Remodeling</title>
+  <title>Jay Bob Construction | Expert Construction &amp; Remodeling</title>
+  <meta name="description" content="Jay Bob Construction delivers expert construction and remodeling services. Schedule a consultation and tell us about your project." />
+  <link rel="canonical" href="https://jaybobconstruction.com/" />
+  <meta name="theme-color" content="#111111" />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Jay Bob Construction" />
+  <meta property="og:description" content="Expert Construction and Remodeling" />
+  <meta property="og:image" content="https://jaybobconstruction.com/images/Jay Bob Construction logo design.png" />
+  <meta property="og:url" content="https://jaybobconstruction.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Jay Bob Construction" />
+
+  <!-- Twitter/X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jay Bob Construction" />
+  <meta name="twitter:description" content="Expert Construction and Remodeling" />
+  <meta name="twitter:image" content="https://jaybobconstruction.com/images/Jay Bob Construction logo design.png" />
 
   <style>
-    /* Footer logo – small & minimal */
-.footer-logo{
-  width: 170px;        /* SMALL */
-  height: 170px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-top: 10px;
-}
-
-.footer-logo img{
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* keeps logo clean */
-  display: block;
-}
-
-
-
-/* Mobile */
-@media (max-width: 980px){
-  .footer-logo{
-    width: 170px;
-    height: 170px;
-  }
-  /* CENTER footer content on mobile */
-@media (max-width: 980px){
-  footer .foot{
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  footer .contact-box{
-    text-align: center;
-  }
-
-  footer .footer-logo{
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media (max-width: 980px){
-  footer .contact-box{
-    margin-top: 24px;
-  }
-}
-  /* CENTER schedule text + image on mobile */
-@media (max-width: 980px){
-  #schedule .two-col > div:first-child{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #schedule .p{
-    max-width: 100%;
-  }
-}
-@media (max-width: 980px){
-  .circle-photo{
-    margin-top: 18px;
-  }
-}
-/* CENTER Contact text on mobile */
-@media (max-width: 980px){
-  #contact .two-col > div:first-child{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #contact .p{
-    max-width: 100%;
-  }
-}
-@media (max-width: 980px){
-  #contact form{
-    margin-top: 12px;
-  }
-}
-}
-.footer-logo{
-  margin-top: 10px;
-}
-
-    :root{
-      --bg:#ffffff;
-      --ink:#0b0f14;
-      --muted:rgba(11,15,20,.68);
-      --line:rgba(11,15,20,.12);
-      --btn:#111;
-      --btnText:#fff;
-      --max:1200px;
-      
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;scroll-behavior:smooth;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}
-    a{text-decoration:none;color:inherit}
-    .wrap{max-width:var(--max);margin:0 auto;padding:0 18px;}
-
-    /* TOP BAR */
-    header{
-      position:fixed; top:0; left:0; right:0; z-index:50;
-      background:transparent;
-    }
-    .topbar{
-      display:flex; align-items:center; justify-content:space-between; gap:14px;
-      padding:18px 22px;
-      color:#fff;
-      text-shadow:0 8px 28px rgba(0,0,0,.45);
-    }
-    .brand{
-      font-weight:900;
-      letter-spacing:-.3px;
-      font-size:22px;
-      white-space:nowrap;
-    }
-    nav{display:flex; gap:22px; align-items:center;}
-    nav a{font-weight:700; opacity:.92}
-    nav a:hover{opacity:1}
-    .pill{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:12px 18px;
-      border-radius:999px;
-      background:rgba(255,255,255,.88);
-      color:#111;
-      font-weight:900;
-      border:1px solid rgba(0,0,0,.08);
-      text-shadow:none;
+    :root {
+      --bg: #ffffff;
+      --ink: #0b0f14;
+      --muted: rgba(11, 15, 20, 0.68);
+      --line: rgba(11, 15, 20, 0.12);
+      --btn: #111111;
+      --btnText: #ffffff;
+      --focus: #0a66ff;
+      --max: 1200px;
     }
 
-    /* HERO */
-    .hero{
-      min-height:100vh;
-      display:grid;
-      place-items:end start;
-      padding:110px 18px 60px; /* space for fixed header */
-      color:#fff;
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      z-index: 100;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: #ffffff;
+      color: #111111;
+      font-weight: 700;
+    }
+
+    .skip-link:focus {
+      left: 10px;
+      top: 10px;
+    }
+
+    /* Top bar */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background: transparent;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 18px 22px;
+      color: #ffffff;
+      text-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+    }
+
+    .brand {
+      font-weight: 900;
+      letter-spacing: -0.3px;
+      font-size: 22px;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    nav a {
+      font-weight: 700;
+      opacity: 0.92;
+    }
+
+    nav a:hover { opacity: 1; }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.88);
+      color: #111111;
+      font-weight: 900;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      text-shadow: none;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      place-items: end start;
+      padding: 110px 18px 60px;
+      color: #ffffff;
       background:
-        linear-gradient(180deg, rgba(0,0,0,.18), rgba(0,0,0,.45)),
-        url("images/ChatGPT\ Image\ Dec\ 30\,\ 2025\,\ 08_21_20\ PM.png");
-      background-size:cover;
-      background-position:center;
-    }
-    .hero-inner{max-width:var(--max);width:100%;margin:0 auto;}
-    .hero h1{
-      margin:0;
-      font-size:clamp(44px, 6vw, 74px);
-      line-height:1.02;
-      letter-spacing:-1px;
+        linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.45)),
+        url("images/ChatGPT Image Dec 30, 2025, 08_21_20 PM.png");
+      background-size: cover;
+      background-position: center;
     }
 
-    /* SECTION BASE */
-    section{background:var(--bg); color:var(--ink);}
-    .section{
-      padding:90px 0;
-      border-top:1px solid var(--line);
+    .hero-inner {
+      max-width: var(--max);
+      width: 100%;
+      margin: 0 auto;
     }
-    .two-col{
-      display:grid;
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(44px, 6vw, 74px);
+      line-height: 1.02;
+      letter-spacing: -1px;
+    }
+
+    /* Section base */
+    section {
+      background: var(--bg);
+      color: var(--ink);
+    }
+
+    .section {
+      padding: 90px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .two-col {
+      display: grid;
       grid-template-columns: 1fr 1fr;
-      gap:48px;
-      align-items:start;
-    }
-    .h2{
-      margin:0 0 14px;
-      font-size:clamp(40px, 4.2vw, 68px);
-      letter-spacing:-1px;
-      line-height:1.03;
-    }
-    .p{
-      margin:0;
-      color:var(--muted);
-      font-size:18px;
-      line-height:1.7;
-      max-width:58ch;
+      gap: 48px;
+      align-items: start;
     }
 
-    /* SCHEDULE */
-    /* Circle photo (normal image, shown inside a circular frame) */
-.circle-photo{
-  width: 340px;
-  height: 340px;
-  border-radius: 999px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  box-shadow: 0 12px 40px rgba(0,0,0,.08);
-  background: #fff;
-  margin-top: 26px;
-}
-
-.circle-photo img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;     /* keeps it filled nicely */
-  object-position: center;
-  display: block;
-}
-
-/* Make it smaller on phones */
-@media (max-width: 980px){
-  .circle-photo{
-    width: 280px;
-    height: 280px;
-    margin: 22px 0 0;
-  }
-}
-
-    .embed-card{
-      border:1px solid var(--line);
-      border-radius:14px;
-      overflow:hidden;
-      background:#fff;
-      box-shadow: 0 12px 40px rgba(0,0,0,.08);
-      min-height:520px;
-    }
-    iframe{width:100%; height:560px; border:0; display:block;}
-
-    /* CONTACT FORM */
-    form{display:grid; gap:14px;}
-    .row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
-    label{font-weight:700; font-size:14px;}
-    input, textarea{
-      width:100%;
-      padding:14px 14px;
-      border-radius:999px;
-      border:1px solid rgba(0,0,0,.20);
-      outline:none;
-      font-size:16px;
-    }
-    textarea{
-      border-radius:18px;
-      min-height:140px;
-      resize:vertical;
-      padding:14px;
-    }
-    .send{
-      width:max-content;
-      padding:14px 26px;
-      border-radius:999px;
-      border:0;
-      background:var(--btn);
-      color:var(--btnText);
-      font-weight:900;
-      cursor:pointer;
+    .h2 {
+      margin: 0 0 14px;
+      font-size: clamp(40px, 4.2vw, 68px);
+      letter-spacing: -1px;
+      line-height: 1.03;
     }
 
-    /* FOOTER */
-    footer{
-      padding:90px 0 110px;
-      border-top:1px solid var(--line);
-      background:#fff;
+    .p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.7;
+      max-width: 58ch;
     }
-    .foot{
-      display:flex;
-      justify-content:space-between;
-      gap:30px;
-      flex-wrap:wrap;
-      align-items:flex-start;
+
+    /* Schedule */
+    .circle-photo {
+      width: 340px;
+      height: 340px;
+      border-radius: 999px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+      background: #ffffff;
+      margin-top: 26px;
     }
-    .foot h3{margin:0 0 10px;font-size:56px;letter-spacing:-1px}
-    .contact-box{
-      text-align:left;
-      font-size:22px;
-      line-height:1.4;
+
+    .circle-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
     }
-    .contact-box b{font-size:30px}
-    .small{margin-top:14px;color:var(--muted);font-size:16px}
 
-    /* MOBILE */
-    @media (max-width: 980px){
-      nav a{display:none;}
-      .two-col{grid-template-columns:1fr;}
-      iframe{height:720px;}
-      .row{grid-template-columns:1fr;}
-      .hero{padding-top:95px;}
-      .foot h3{font-size:46px}
+    .embed-card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+      min-height: 520px;
     }
-    /* FORCE footer center on mobile */
-@media (max-width: 980px){
-  footer .foot{
-    display: flex;
-    flex-direction: column;
-    align-items: center !important;
-    justify-content: center;
-    text-align: center;
-  }
 
-  footer .foot > div{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    iframe {
+      width: 100%;
+      height: 560px;
+      border: 0;
+      display: block;
+    }
 
-  footer h3{
-    text-align: center;
-  }
+    /* Contact form */
+    form { display: grid; gap: 14px; }
 
-  footer .footer-logo{
-    margin: 12px auto 0;
-  }
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
 
-  footer .contact-box{
-    text-align: center;
-    margin-top: 22px;
-  }
-}
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      outline: none;
+      font-size: 16px;
+      font: inherit;
+    }
+
+    textarea {
+      border-radius: 18px;
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .send {
+      width: max-content;
+      padding: 14px 26px;
+      border-radius: 999px;
+      border: 0;
+      background: var(--btn);
+      color: var(--btnText);
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      padding: 90px 0 110px;
+      border-top: 1px solid var(--line);
+      background: #ffffff;
+    }
+
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .foot h3 {
+      margin: 0 0 10px;
+      font-size: 56px;
+      letter-spacing: -1px;
+    }
+
+    .footer-logo {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .footer-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .contact-box {
+      text-align: left;
+      font-size: 22px;
+      line-height: 1.4;
+    }
+
+    .contact-box b { font-size: 30px; }
+
+    /* Mobile */
+    @media (max-width: 980px) {
+      nav a { display: none; }
+
+      .hero { padding-top: 95px; }
+
+      .two-col { grid-template-columns: 1fr; }
+
+      .row { grid-template-columns: 1fr; }
+
+      iframe { height: 720px; }
+
+      .foot {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .foot > div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .foot h3 { font-size: 46px; }
+
+      .footer-logo {
+        width: 170px;
+        height: 170px;
+        margin: 12px auto 0;
+      }
+
+      .contact-box {
+        text-align: center;
+        margin-top: 22px;
+      }
+
+      #schedule .two-col > div:first-child,
+      #contact .two-col > div:first-child {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #schedule .p,
+      #contact .p {
+        max-width: 100%;
+      }
+
+      #contact form { margin-top: 12px; }
+
+      .circle-photo {
+        width: 280px;
+        height: 280px;
+        margin: 18px 0 0;
+      }
+    }
   </style>
 </head>
-
 <body>
-  <!-- HEADER -->
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <header>
     <div class="topbar wrap">
       <div class="brand">Jay Bob Construction</div>
-      <nav>
+      <nav aria-label="Primary">
         <a href="#top">Home</a>
         <a href="#schedule">Schedule</a>
         <a href="#contact">Contact</a>
@@ -345,87 +394,85 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="hero-inner">
-      <h1>Expert Construction<br/>and Remodeling</h1>
-    </div>
-  </section>
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <h1>Expert Construction<br />and Remodeling</h1>
+      </div>
+    </section>
 
-  <!-- SCHEDULE -->
-  <section class="section" id="schedule">
-    <div class="wrap two-col">
-      <div>
-        <h2 class="h2">Schedule your appointment</h2>
-        <p class="p">
-          Pick a time that works for you. We’ll confirm details and talk through your project.
-        </p>
-        <div class="circle-photo">
-          <img src="images/ChatGPT Image Dec 30, 2025, 07_45_04 PM.png" alt="Jay Bob Construction project" />
+    <section class="section" id="schedule">
+      <div class="wrap two-col">
+        <div>
+          <h2 class="h2">Schedule your appointment</h2>
+          <p class="p">
+            Pick a time that works for you. We’ll confirm details and talk through your project.
+          </p>
+          <div class="circle-photo">
+            <img src="images/ChatGPT Image Dec 30, 2025, 07_45_04 PM.png" alt="Jay Bob Construction project" loading="lazy" decoding="async" />
+          </div>
+        </div>
+
+        <div class="embed-card" aria-label="Scheduling">
+          <iframe src="https://JayBobConstructionSchedule.as.me/" title="Schedule appointment"></iframe>
         </div>
       </div>
+    </section>
 
-      <div class="embed-card" aria-label="Scheduling">
-        <!-- Replace the src with your Acuity embed link -->
-        <iframe
-          src="https://JayBobConstructionSchedule.as.me/"
-          title="Schedule Appointment">
-        </iframe>
-      </div>
-    </div>
-  </section>
+    <section class="section" id="contact">
+      <div class="wrap two-col">
+        <div>
+          <h2 class="h2">Contact Us</h2>
+          <p class="p">
+            Interested in remodeling your home? Fill out some info and we’ll be in touch shortly.
+          </p>
+        </div>
 
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <div class="wrap two-col">
-      <div>
-        <h2 class="h2">Contact Us</h2>
-        <p class="p">
-          Interested in remodeling your home? Fill out some info and we’ll be in touch shortly.
-        </p>
-      </div>
-
-      <div>
-        <!-- Replace action with Formspree (or keep # if you don't want it to submit yet) -->
-        <form action="https://formspree.io/f/mykyrbby" method="POST">
-          <div>
-            <label>Name <span style="color:var(--muted)">(required)</span></label>
-            <div class="row">
-              <input name="firstName" placeholder="First Name" required />
-              <input name="lastName" placeholder="Last Name" required />
+        <div>
+          <form action="https://formspree.io/f/mykyrbby" method="POST">
+            <div>
+              <div class="row">
+                <div>
+                  <label for="firstName">First name <span style="color: var(--muted)">(required)</span></label>
+                  <input id="firstName" name="firstName" autocomplete="given-name" placeholder="First Name" required />
+                </div>
+                <div>
+                  <label for="lastName">Last name <span style="color: var(--muted)">(required)</span></label>
+                  <input id="lastName" name="lastName" autocomplete="family-name" placeholder="Last Name" required />
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div>
-            <label>Email <span style="color:var(--muted)">(required)</span></label>
-            <input name="email" type="email" placeholder="Email" required />
-          </div>
+            <div>
+              <label for="email">Email <span style="color: var(--muted)">(required)</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="Email" required />
+            </div>
 
-          <div>
-            <label>Message <span style="color:var(--muted)">(required)</span></label>
-            <textarea name="message" placeholder="Tell us about your project" required></textarea>
-          </div>
+            <div>
+              <label for="message">Message <span style="color: var(--muted)">(required)</span></label>
+              <textarea id="message" name="message" placeholder="Tell us about your project" required></textarea>
+            </div>
 
-          <button class="send" type="submit">SEND</button>
-        </form>
+            <button class="send" type="submit">Send</button>
+          </form>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- FOOTER -->
-  
+  <footer>
     <div class="wrap foot">
       <div>
         <h3>Jay Bob Construction</h3>
-      
         <div class="footer-logo">
-          <img src="images/Jay Bob Construction logo design.png" alt="Jay Bob Construction Logo" />
+          <img src="images/Jay Bob Construction logo design.png" alt="Jay Bob Construction logo" loading="lazy" decoding="async" />
         </div>
       </div>
+
       <div class="contact-box">
-        <b>Contact :</b><br/><br/>
-        English : <a href="tel:16266242544">626-624-2544</a><br/><br/>
-        Español : <a href="tel:16265593219">626-559-3219</a><br/><br/>
+        <b>Contact:</b><br /><br />
+        English: <a href="tel:16266242544">626-624-2544</a><br /><br />
+        Español: <a href="tel:16265593219">626-559-3219</a><br /><br />
       </div>
     </div>
   </footer>
