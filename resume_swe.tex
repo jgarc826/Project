@@ -1,0 +1,154 @@
+%-------------------------
+% Resume in Latex
+% Author : Adapted for Jessy Garcia
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage[colorlinks=true, urlcolor=black, linkcolor=black]{hyperref}
+\input{glyphtounicode}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage[left=.5in, right=.5in, top=.72in, bottom=.72in]{geometry}
+\addtolength{\topmargin}{-.50in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-1pt}}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+\newcommand{\resumeProjectHeading}[2]{\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-4pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt, topsep=2pt, parsep=0pt, partopsep=0pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in, itemsep=1pt, topsep=2pt, parsep=0pt, partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\begin{center}
+    {\Huge \bfseries Jessy Garcia} \\ \vspace{4pt}
+    \small
+    U.S. Citizen \,\textbar\, (626)~464\textendash3441 \,\textbar\,
+    \href{mailto:jgarc826@ucr.edu}{\underline{jgarc826@ucr.edu}} \,\textbar\,
+    \href{https://github.com/jgarc826}{\underline{github.com/jgarc826}} \,\textbar\,
+    \href{https://www.linkedin.com/in/jessygarccia/}{\underline{linkedin.com/in/jessygarccia}}
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California, Riverside}{\textbf{Expected June 2027}}
+      {\textit{B.S. Data Science, GPA: 3.7/4.00}}{}
+      \item[] \small{Chancellor's List '23, '24 \,|\, Dean's List (7x)}
+      \item[] \small{\textbf{Coursework:} Data Structures \& Algorithms, Software Construction, Database Management, Machine Learning, Linear Algebra}
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C++, Python, Java, JavaScript, SQL (PostgreSQL)} \\
+     \textbf{Frameworks \& Libraries}{: Node.js, React.js, Next.js, GoogleTest, Playwright, Supertest} \\
+     \textbf{Tools \& Platforms}{: Git, Linux, CMake, gdb, Valgrind, MongoDB, GitHub, VS Code} \\
+     \textbf{Core Competencies}{: Systems programming, test automation, API integration, object-oriented design, debugging, CI/CD}
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Data Scientist Intern}{June 2025 -- August 2025}
+      {University of Southern California | Keck School of Medicine}{Los Angeles, CA}
+      \resumeItemListStart
+        \resumeItem{Built a 2013--2022 California ZIP-code panel by integrating CEC/DMV vehicle data, CHHS asthma ED outcomes, and ACS socioeconomic indicators.}
+        \resumeItem{Modeled the relationship between ZEV adoption and asthma ED visits using multilevel and mixed-effects regression, normalizing ZEVs per 1,000 residents and ED rates per 10,000.}
+        \resumeItem{Found that increased ZEV adoption was associated with 3--9\% reductions in asthma ED visits across SES-adjusted models.}
+        \resumeItem{Adjusted for key socioeconomic factors (poverty, income, education) and presented equity-focused findings at the USC SIBS symposium.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Associate Engineer}{March 2025 -- Present}
+      {EcoCar EV Laboratory | Center for Research and Technology}{Riverside, CA}
+      \resumeItemListStart
+        \resumeItem{Debugged and resolved a control-logic defect blocking 40\% of gear transitions, restoring full Electric Drive Unit model functionality.}
+        \resumeItem{Built Python CI/CD automation with configuration-driven logging and resilient error handling (\texttt{JSON}, \texttt{subprocess}, \texttt{pathlib}) for reliable overnight validation across control-system repositories.}
+        \resumeItem{Executed Model-in-the-Loop test campaigns for ETRS, EDU, and Active Discharge subsystems on the challenge LYRIQ platform in collaboration with the testing team.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Data Scientist Intern}{July 2024 -- August 2024}
+      {Lawrence Livermore National Laboratory}{Livermore, CA}
+      \resumeItemListStart
+        \resumeItem{Built preprocessing and training pipelines for 16,000+ ECG samples using Pandas/NumPy and automated model-benchmark scripts.}
+        \resumeItem{Benchmarked XGBoost, LightGBM, Random Forest, and CNN architectures for binary and multi-class ECG classification.}
+        \resumeItem{Achieved over 98\% classification accuracy and presented implementation/results in a technical research poster.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{PHIL -- AI Gmail Assistant (Chrome Extension)} $|$ \emph{JavaScript, Chrome Extension APIs, Gmail API, Gemini API, HTML/CSS}}{}
+      \resumeItemListStart
+        \resumeItem{Engineered a Chrome extension side panel that fetches Gmail messages and renders AI-generated summaries and priority labels.}
+        \resumeItem{Implemented local caching, deduplication, and stateful processing to avoid reprocessing seen emails and reduce redundant API calls.}
+        \resumeItem{Integrated Gmail and Gemini APIs with message-state handling (new vs.\ read) and routing logic for consistent inbox triage.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Battlestar RPG} $|$ \emph{C++, STL, GoogleTest, CMake}}{}
+      \resumeItemListStart
+        \resumeItem{Collaborated in a 5-person team to build a 3.4k-line RPG engine with 23 classes over 3 months.}
+        \resumeItem{Implemented a max-heap combat scheduler for speed-based turn ordering with O(n log n) runtime.}
+        \resumeItem{Designed a polymorphic item architecture with clone-pattern serialization and wrote 2.3k lines of unit tests for combat, inventory, sorting, and state persistence.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\end{document}
