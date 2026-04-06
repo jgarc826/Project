@@ -27,8 +27,8 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-\usepackage[left=.5in, right=.5in, top=.8in, bottom=.8in]{geometry}
-\addtolength{\topmargin}{-.60in}
+\usepackage[left=.45in, right=.45in, top=.65in, bottom=.65in]{geometry}
+\addtolength{\topmargin}{-.55in}
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
@@ -43,7 +43,7 @@
 \pdfgentounicode=1
 
 % Custom commands
-\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-3pt}}}}
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -58,10 +58,10 @@
 }
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}, itemsep=0pt, topsep=0pt, parsep=0pt, partopsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in, itemsep=0pt, topsep=1pt, parsep=0pt, partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -84,17 +84,17 @@
       \vspace{-5pt}
       \item[] \small{Chancellor's List '23, '24 \,|\, Dean's List (7x)}
       \vspace{-5pt}
-      \item[] \small{\textbf{Coursework:} Data Structures \& Algorithms, Software Construction, Database Management, Machine Learning, AI, Computer Vision, Linear Algebra, Regression Analysis}
+      \item[] \small{\textbf{Coursework:} Data Structures \& Algorithms, Software Construction, Database Management, Machine Learning, Linear Algebra}
   \resumeSubHeadingListEnd
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, C++, Java, JavaScript, SQL (PostgreSQL), R, MATLAB} \\
-     \textbf{Frameworks \& Libraries}{: Next.js, React.js, Node.js, Supertest, GoogleTest, Playwright, Pandas, NumPy, Scikit-learn, PyTorch, Matplotlib} \\
-     \textbf{Tools \& Platforms}{: Git, Linux, MongoDB, Vercel, Railway, CMake, gdb, Valgrind, GitHub, Google Colab, VS Code} \\
-     \textbf{Core Competencies}{: Systems Programming, debugging, algorithmic problem solving, REST API design, authentication, unit testing, CI/CD}
+     \textbf{Languages}{: Python, C++, Java, JavaScript, SQL (PostgreSQL), MATLAB} \\
+     \textbf{Frameworks \& Libraries}{: React.js, Next.js, Node.js, GoogleTest, Playwright, Supertest} \\
+     \textbf{Tools \& Platforms}{: Git, Linux, MongoDB, CMake, gdb, Valgrind, GitHub, VS Code} \\
+     \textbf{Core Competencies}{: Systems programming, debugging, algorithmic problem solving, REST API design, authentication, unit testing, CI/CD}
     }}
  \end{itemize}
  \vspace{-16pt}
@@ -107,7 +107,6 @@
       {Data Scientist Intern}{June 2025 -- August 2025}
       {University of Southern California | Keck School of Medicine}{Los Angeles, CA}
       \resumeItemListStart
-        \resumeItem{Completed intensive training in statistical methods, study design, and biomedical data analysis under faculty mentorship.}
         \resumeItem{Investigated the relationship between zero emission vehicle (ZEV) adoption and asthma-related emergency department visits.}
         \resumeItem{Conducted multilevel linear regression modeling, adjusting for socioeconomic factors, COVID-19, and secular trends.}
         \resumeItem{Presented findings on educational disparities and health impacts of EV transition at the USC SIBS symposium.}
@@ -119,18 +118,16 @@
       \resumeItemListStart
         \resumeItem{Resolved logic issue preventing 40\% of gear transitions, restoring full functionality to the Electric Drive Unit model.}
         \resumeItem{Collaborated with testing team to conduct Model-in-the-Loop (MIL) testing of ETRS (Electronic Transmission Range Selection), EDU (Electric Drive Unit), and Active Discharge systems on challenge LYRIQ vehicle.}
-        \resumeItem{Developed Python-based CI/CD automation to orchestrate overnight testing pipelines, including repository synchronization, validation logging, and automated status reporting across multiple control system projects.}
-        \resumeItem{Implemented robust error handling, logging, and configuration-driven workflows using JSON, \texttt{subprocess}, and \texttt{pathlib} to ensure reliable test execution and traceability.}
+        \resumeItem{Developed Python CI/CD automation with configuration-driven logging and robust error handling (\texttt{JSON}, \texttt{subprocess}, \texttt{pathlib}) to run reliable overnight validation across control-system projects.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Data Scientist Intern}{July 2024 -- August 2024}
       {Lawrence Livermore National Laboratory}{Livermore, CA}
       \resumeItemListStart
-        \resumeItem{Trained ML models (XGBoost, LightGBM, Random Forest, CNNs) using scikit-learn, PyTorch, NumPy to predict heart ECG data.}
+        \resumeItem{Trained and benchmarked XGBoost, LightGBM, Random Forest, and CNN models to classify heart ECG data.}
         \resumeItem{Processed and labeled datasets (16,000+ samples) with Pandas for training and testing.}
-        \resumeItem{Achieved over 98\% accuracy on binary and multi-class ECG classification tasks.}
-        \resumeItem{Presented research poster with findings to peers and professionals.}
+        \resumeItem{Achieved over 98\% accuracy on binary and multi-class ECG classification tasks and presented findings in a research poster.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -141,8 +138,8 @@
     \resumeProjectHeading
       {\textbf{PHIL -- AI Gmail Assistant (Chrome Extension)} $|$ \emph{JavaScript, Chrome Extension APIs, Gmail API, Gemini API, HTML/CSS}}{}
       \resumeItemListStart
-        \resumeItem{Built a Chrome extension that fetches inbox emails and displays AI-generated one-line summaries and priority labels in a side panel.}
-        \resumeItem{Implemented local caching and deduplication logic to avoid reprocessing previously seen emails and reduce redundant API requests.}
+        \resumeItem{Built a Chrome extension that fetches Gmail messages and displays AI-generated summaries and priority labels in a side panel.}
+        \resumeItem{Implemented local caching and deduplication logic to avoid reprocessing previously seen emails and cut redundant API requests.}
         \resumeItem{Engineered message-state handling (new vs.\ read) and category routing (Important, Promotions, Spam) for consistent inbox triage behavior.}
       \resumeItemListEnd
 
@@ -151,8 +148,7 @@
       \resumeItemListStart
         \resumeItem{Collaborated in a 5-person team to build a 3.4k-line RPG engine with 23 classes over 3 months.}
         \resumeItem{Implemented a max-heap combat scheduler for speed-based turn ordering with O(n log n) runtime.}
-        \resumeItem{Designed a polymorphic item architecture using the clone pattern and template-based serialization for extensible save/load support.}
-        \resumeItem{Wrote 2.3k lines of unit tests covering combat, inventory, sorting, and state persistence to improve reliability and regression safety.}
+        \resumeItem{Designed a polymorphic item architecture with clone-pattern serialization and wrote 2.3k lines of unit tests for combat, inventory, sorting, and state persistence.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
